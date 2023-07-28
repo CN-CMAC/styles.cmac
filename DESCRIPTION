@@ -1,0 +1,22 @@
+Package: styles.cmac
+Type: Package
+Title: CMAC Branding for `ggplot2`
+Version: 0.1.0
+Author@R: person("Daniel", "Carpenter", email = "daniel.carpenter@chickasaw.net",
+                  role = c("aut", "cre") )
+Author: Daniel Carpenter [aut, cre]
+Maintainer: Daniel Carpenter <daniel.carpenter@chickasaw.net>
+Description: This package implements CMAC branding in ggplot2. This package 
+    includes the base gray and blue gradients, text colors, and the data 
+    visualization colors. The package works natively with ggplot2 for ease 
+    of brand implementation.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.1.0)
+Imports:
+    ggplot2,
+    grDevices,
+    stats,
+    utils
+RoxygenNote: 7.2.3
