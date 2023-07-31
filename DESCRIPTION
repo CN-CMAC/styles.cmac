@@ -20,6 +20,7 @@ Imports:
     utils
 RoxygenNote: 7.2.3
 Suggests: 
+    grDevices,
     knitr,
     rmarkdown
 VignetteBuilder: knitr

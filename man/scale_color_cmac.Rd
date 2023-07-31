@@ -25,6 +25,7 @@ ggplotObject <- ggplot(mtcars, aes(y=mpg, x=wt, color=as.factor(cyl))) +
 
 # Add the color
 ggplotObject + scale_color_cmac()
+
 }
 \seealso{
 \code{\link{theme_cmac}}

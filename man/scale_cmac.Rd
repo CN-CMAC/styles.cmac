@@ -36,6 +36,7 @@ scale_cmac('color', displayNames = TRUE) # All accent colors (line colors)
 scale_cmac('fill',  displayNames = TRUE) # All main colors (fills)
 scale_cmac('fill', 3)                    # 3 fills
 scale_cmac('fill', 'red', displayNames = TRUE) # Just a red fill
+
 }
 \seealso{
 \code{\link{theme_cmac}}

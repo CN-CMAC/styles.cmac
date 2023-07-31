@@ -7,7 +7,7 @@
 theme_cmac(inTimesNewRoman = FALSE)
 }
 \arguments{
-\item{inTimesNewRoman}{TRUE if plot in Times New Roman Font (Default), FALSE uses ggplot main font.}
+\item{inTimesNewRoman}{TRUE if plot in Times New Roman Font (Default), FALSE uses ggplot main font. Only works on Windows.}
 }
 \value{
 The function returns a ggplot theme

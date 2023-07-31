@@ -4,7 +4,6 @@
 #'
 #' @param inTimesNewRoman TRUE if plot in Times New Roman Font (Default), FALSE uses ggplot main font. Only works on Windows.
 #'
-#' @importFrom grDevices windowsFonts windowsFont
 #' @importFrom ggplot2 theme element_text element_blank element_line element_rect margin coord_cartesian theme_set unit
 #'
 #' @export theme_cmac
@@ -117,8 +116,8 @@ theme_cmac <- function(inTimesNewRoman = FALSE) {
     newFont  = "Times"            # simplified name for objects
 
     # Load and create "Times" font using Times New Roman
-    windowsFonts(Times = windowsFont(cmacFont))
-    windowsFonts(TimesLight = windowsFont(cmacFont))
+    grDevices::windowsFonts(Times = grDevices::windowsFont(cmacFont))
+    grDevices::windowsFonts(TimesLight = grDevices::windowsFont(cmacFont))
 
     # Create a ggplot object for Times New Roman with default 12 pt font
     FONT_FAMILY = newFont
