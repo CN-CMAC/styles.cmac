@@ -4,7 +4,10 @@
 \alias{theme_cmac}
 \title{Create a CMAC Theme for ggplot}
 \usage{
-theme_cmac()
+theme_cmac(inTimesNewRoman = FALSE)
+}
+\arguments{
+\item{inTimesNewRoman}{TRUE if plot in Times New Roman Font (Default), FALSE uses ggplot main font.}
 }
 \value{
 The function returns a ggplot theme
@@ -24,4 +27,11 @@ ggplotObject <- ggplot(mtcars, aes(y=mpg, x=wt, color=as.factor(cyl))) +
 # Add the theme
 ggplotObject + theme_cmac()
 
+}
+\seealso{
+\code{\link{scale_cmac}}
+
+\code{\link{scale_color_cmac}}
+
+\code{\link{scale_fill_cmac}}
 }

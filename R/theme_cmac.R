@@ -2,10 +2,16 @@
 #' @description This function creates a custom theme for ggplot with several theme modifications
 #' @return      The function returns a ggplot theme
 #'
+#' @param inTimesNewRoman TRUE if plot in Times New Roman Font (Default), FALSE uses ggplot main font.
+#'
 #' @importFrom grDevices windowsFonts windowsFont
 #' @importFrom ggplot2 theme element_text element_blank element_line element_rect margin coord_cartesian theme_set unit
 #'
-#' @export
+#' @export theme_cmac
+#'
+#' @seealso \code{\link{scale_cmac}}
+#' @seealso \code{\link{scale_color_cmac}}
+#' @seealso \code{\link{scale_fill_cmac}}
 #'
 #' @examples
 #' library(ggplot2)
@@ -23,7 +29,7 @@
 
 
 # Define the function 'theme_cmac' to customize themes for ggplots
-theme_cmac <- function() {
+theme_cmac <- function(inTimesNewRoman = FALSE) {
 
   # Define text and border colors
   textCol = scale_cmac('text')
@@ -108,7 +114,9 @@ theme_cmac <- function() {
   coord_cartesian(clip = 'off')
 
   # Combine all the defined theme elements
-  theme_CMAC = baseTheme + font.TimesNewRoman + alignment.left
+  theme_CMAC = baseTheme + alignment.left
+
+  if (inTimesNewRoman) { theme_CMAC = theme_CMAC + font.TimesNewRoman }
 
   # Set the created theme as active
   theme_set(theme_CMAC)

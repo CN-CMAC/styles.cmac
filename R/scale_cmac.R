@@ -8,7 +8,12 @@
 #' @param displayNames TRUE if you want to see the names of each color. Default FALSE.
 #'
 #' @return hex codes of a subsetted CMAC palette
+#'
 #' @export scale_cmac
+#'
+#' @seealso \code{\link{theme_cmac}}
+#' @seealso \code{\link{scale_color_cmac}}
+#' @seealso \code{\link{scale_fill_cmac}}
 #'
 #' @examples
 #' library(styles.cmac)

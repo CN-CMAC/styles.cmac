@@ -6,6 +6,10 @@
 #'
 #' @export scale_fill_cmac
 #'
+#' @seealso \code{\link{theme_cmac}}
+#' @seealso \code{\link{scale_cmac}}
+#' @seealso \code{\link{scale_color_cmac}}
+#'
 #' @importFrom ggplot2 scale_fill_manual
 #'
 #' @examples
