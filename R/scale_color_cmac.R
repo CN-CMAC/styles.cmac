@@ -6,10 +6,6 @@
 #'
 #' @export scale_color_cmac
 #'
-#' @seealso \code{\link{theme_cmac}}
-#' @seealso \code{\link{scale_cmac}}
-#' @seealso \code{\link{scale_fill_cmac}}
-#'
 #' @importFrom ggplot2 scale_color_manual
 #'
 #' @examples
@@ -22,6 +18,10 @@
 #'
 #' # Add the color
 #' ggplotObject + scale_color_cmac()
+#'
+#' @seealso \code{\link{theme_cmac}}
+#' @seealso \code{\link{scale_cmac}}
+#' @seealso \code{\link{scale_fill_cmac}}
 
 
 

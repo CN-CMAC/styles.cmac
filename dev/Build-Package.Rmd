@@ -1,0 +1,38 @@
+---
+title: "Check and Build Package"
+author: "Daniel Carpenter"
+date: "`r Sys.Date()`"
+output: github_document  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Do this every time you make a change
+```{r loading}
+library(devtools)
+```
+
+```{r checking}
+# Ensure there are no errors
+devtools::check()
+```
+
+```{r building}
+# Build the package
+devtools::build()
+```
+
+```{r installing}
+# install the package and build the vignette
+devtools::install(build_vignettes = TRUE, upgrade = 'never')
+```
+
+```{r viewVignette}
+# view the vignette
+packageName  = "styles.cmac"
+vignetteName = "intro-to-package"
+
+vignette(vignetteName, package = packageName)
+```

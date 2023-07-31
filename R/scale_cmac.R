@@ -11,10 +11,6 @@
 #'
 #' @export scale_cmac
 #'
-#' @seealso \code{\link{theme_cmac}}
-#' @seealso \code{\link{scale_color_cmac}}
-#' @seealso \code{\link{scale_fill_cmac}}
-#'
 #' @examples
 #' library(styles.cmac)
 #'
@@ -26,6 +22,10 @@
 #' scale_cmac('fill',  displayNames = TRUE) # All main colors (fills)
 #' scale_cmac('fill', 3)                    # 3 fills
 #' scale_cmac('fill', 'red', displayNames = TRUE) # Just a red fill
+#'
+#' @seealso \code{\link{theme_cmac}}
+#' @seealso \code{\link{scale_color_cmac}}
+#' @seealso \code{\link{scale_fill_cmac}}
 
 
 

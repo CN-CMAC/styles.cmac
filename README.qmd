@@ -12,9 +12,10 @@ editor: visual
 # `styles.cmac`
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/tidyverse/dplyr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tidyverse/dplyr/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
 
+[![R-CMD-check](https://github.com/tidyverse/dplyr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tidyverse/dplyr/actions/workflows/R-CMD-check.yaml)
+
+<!-- badges: end -->
 
 ## Overview
 
