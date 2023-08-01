@@ -37,12 +37,14 @@ devtools::install_github("CN-OIMSF/styles.cmac", build_vignettes = TRUE)
 
 ## Viewing the Vignette
 
-```{r}
-# see what is available
-browseVignettes('styles.cmac')
+To see in-depth documentation of the package, please uncomment and issue the following commands.
 
-# To view it then run: 
-vignette("intro-to-package", package = "styles.cmac")
+```{r}
+# # see what is available
+# browseVignettes('styles.cmac')
+
+# # To view it then run: 
+# vignette("intro-to-package", package = "styles.cmac")
 ```
 
 ## Examples
