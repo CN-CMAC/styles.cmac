@@ -4,10 +4,12 @@
 \alias{scale_color_cmac}
 \title{CMAC ggplot Color Scale}
 \usage{
-scale_color_cmac(overrideWithFill = FALSE)
+scale_color_cmac(overrideWithFill = FALSE, ...)
 }
 \arguments{
 \item{overrideWithFill}{TRUE if you want to use the fill palette for the color mapping. (Default FALSE)}
+
+\item{...}{Additional parameters passed to either scale_color_manual or scale_fill_manual functions, such as guide = 'none'}
 }
 \value{
 ggplot color scale
@@ -25,6 +27,12 @@ ggplotObject <- ggplot(mtcars, aes(y=mpg, x=wt, color=as.factor(cyl))) +
 
 # Add the color
 ggplotObject + scale_color_cmac()
+
+# Add the fill
+ggplotObject + scale_color_cmac(overrideWithFill = TRUE)
+
+# Add the color with no legend using an optional parameter
+ggplotObject + scale_color_cmac(guide = 'none')
 
 }
 \seealso{

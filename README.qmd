@@ -13,8 +13,6 @@ editor: visual
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/tidyverse/dplyr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tidyverse/dplyr/actions/workflows/R-CMD-check.yaml)
-
 <!-- badges: end -->
 
 ## Overview
@@ -22,6 +20,7 @@ editor: visual
 > -   CMAC Brand in `ggplot2`
 > -   Package that streamlines color palette usage, adapated from the [Tableau 10 Palette](https://www.tableau.com/blog/colors-upgrade-tableau-10-56782)
 > -   See colorblind statistics for the [fill palette](https://davidmathlogic.com/colorblind/#%23BECDE0-%23FFD597-%23F6B7B4-%23BEE0D2-%23E4C6DC-%23BDDBE1-%23F7E5B3-%23DCDADA-%23FCC8DA-%23E5CFC5) and the [color (*line*) palette](https://davidmathlogic.com/colorblind/#%236388B4-%23E68900-%23EB4B43-%2354AC88-%23B07AA1-%233C9DAA-%23C5A952-%238A807E-%23D16D91-%23945430)
+> -   ***PLEASE SEE THE PACKAGE [VIGNETTE]{.underline} FOR MORE DETAILED EXAMPLES***
 
 <br>
 
@@ -31,9 +30,19 @@ You can install the development version of styles.cmac from [GitHub](https://git
 
 ```{r, eval=FALSE}
 # Install devtools if not installed (for GitHub Package)
-if (!require("devtools"))   install.packages("devtools")
+if (!require("devtools")) install.packages("devtools")
 
 devtools::install_github("CN-OIMSF/styles.cmac")
+```
+
+## Viewing the Vignette
+
+```{r}
+# see what is available
+browseVignettes('styles.cmac')
+
+# To view it then run: 
+vignette("intro-to-package", package = "styles.cmac")
 ```
 
 ## Examples

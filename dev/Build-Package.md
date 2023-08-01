@@ -1,7 +1,7 @@
 Check and Build Package
 ================
 Daniel Carpenter
-2023-07-31
+2023-08-01
 
 Do this every time you make a change
 
@@ -47,7 +47,7 @@ devtools::check()
     ## • _R_CHECK_FORCE_SUGGESTS_      : FALSE
     ## • NOT_CRAN                      : true
     ## ── R CMD check ─────────────────────────────────────────────────────────────────
-    ## * using log directory 'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpI3XgKA/styles.cmac.Rcheck'
+    ## * using log directory 'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpSkcZPG/styles.cmac.Rcheck'
     ## * using R version 4.2.3 (2023-03-15 ucrt)
     ## * using platform: x86_64-w64-mingw32 (64-bit)
     ## * using session charset: UTF-8
@@ -110,11 +110,11 @@ devtools::check()
     ## 
     ## Status: 1 NOTE
     ## See
-    ##   'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpI3XgKA/styles.cmac.Rcheck/00check.log'
+    ##   'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpSkcZPG/styles.cmac.Rcheck/00check.log'
     ## for details.
 
     ## ── R CMD check results ────────────────────────────────── styles.cmac 0.1.0 ────
-    ## Duration: 53.6s
+    ## Duration: 57.3s
     ## 
     ## ❯ checking top-level files ... NOTE
     ##   Non-standard files/directories found at top level:
@@ -156,7 +156,7 @@ devtools::install(build_vignettes = TRUE, upgrade = 'never')
     ## * building 'styles.cmac_0.1.0.tar.gz'
     ## 
     ## Running "C:/PROGRA~1/R/R-42~1.3/bin/x64/Rcmd.exe" INSTALL \
-    ##   "C:\Users\DANIEL~1.CAR\AppData\Local\Temp\RtmpI3XgKA/styles.cmac_0.1.0.tar.gz" \
+    ##   "C:\Users\DANIEL~1.CAR\AppData\Local\Temp\RtmpSkcZPG/styles.cmac_0.1.0.tar.gz" \
     ##   --install-tests 
     ## * installing to library 'C:/Users/daniel.carpenter/AppData/Local/R/win-library/4.2'
     ## * installing *source* package 'styles.cmac' ...
@@ -181,4 +181,4 @@ vignetteName = "intro-to-package"
 vignette(vignetteName, package = packageName)
 ```
 
-    ## Warning: vignette 'intro-to-package' not found
+    ## starting httpd help server ... done

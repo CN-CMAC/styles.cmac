@@ -9,44 +9,37 @@ Daniel Carpenter
   - <a href="#installation-of-package"
     id="toc-installation-of-package"><span
     class="toc-section-number">1.2</span> Installation of Package</a>
+  - <a href="#viewing-the-vignette" id="toc-viewing-the-vignette"><span
+    class="toc-section-number">1.3</span> Viewing the Vignette</a>
   - <a href="#examples" id="toc-examples"><span
-    class="toc-section-number">1.3</span> Examples</a>
+    class="toc-section-number">1.4</span> Examples</a>
     - <a href="#create-a-basic-plot-structure"
       id="toc-create-a-basic-plot-structure"><span
-      class="toc-section-number">1.3.1</span> Create a basic plot
+      class="toc-section-number">1.4.1</span> Create a basic plot
       structure</a>
     - <a href="#use-multiple-colors" id="toc-use-multiple-colors"><span
-      class="toc-section-number">1.3.2</span> Use Multiple Colors</a>
+      class="toc-section-number">1.4.2</span> Use Multiple Colors</a>
     - <a href="#use-only-1-color" id="toc-use-only-1-color"><span
-      class="toc-section-number">1.3.3</span> Use only <code>1</code>
+      class="toc-section-number">1.4.3</span> Use only <code>1</code>
       Color</a>
     - <a href="#how-to-use-times-new-roman"
       id="toc-how-to-use-times-new-roman"><span
-      class="toc-section-number">1.3.4</span> How to use Times New Roman</a>
+      class="toc-section-number">1.4.4</span> How to use Times New Roman</a>
   - <a href="#colors-deep-dive" id="toc-colors-deep-dive"><span
-    class="toc-section-number">1.4</span> Colors Deep Dive</a>
+    class="toc-section-number">1.5</span> Colors Deep Dive</a>
     - <a href="#what-colors-are-available"
       id="toc-what-colors-are-available"><span
-      class="toc-section-number">1.4.1</span> What Colors are Available?</a>
+      class="toc-section-number">1.5.1</span> What Colors are Available?</a>
     - <a href="#how-to-get-1-color" id="toc-how-to-get-1-color"><span
-      class="toc-section-number">1.4.2</span> How to get <code>1</code>
+      class="toc-section-number">1.5.2</span> How to get <code>1</code>
       color?</a>
     - <a href="#how-to-get-1-colors" id="toc-how-to-get-1-colors"><span
-      class="toc-section-number">1.4.3</span> How to get <code>&gt;1</code>
+      class="toc-section-number">1.5.3</span> How to get <code>&gt;1</code>
       colors</a>
 
 # `styles.cmac`
 
 <!-- badges: start -->
-
-<div>
-
-[![](https://github.com/tidyverse/dplyr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tidyverse/dplyr/actions/workflows/R-CMD-check.yaml)
-
-R-CMD-check
-
-</div>
-
 <!-- badges: end -->
 
 ## Overview
@@ -59,6 +52,8 @@ R-CMD-check
 >   palette](https://davidmathlogic.com/colorblind/#%23BECDE0-%23FFD597-%23F6B7B4-%23BEE0D2-%23E4C6DC-%23BDDBE1-%23F7E5B3-%23DCDADA-%23FCC8DA-%23E5CFC5)
 >   and the [color (*line*)
 >   palette](https://davidmathlogic.com/colorblind/#%236388B4-%23E68900-%23EB4B43-%2354AC88-%23B07AA1-%233C9DAA-%23C5A952-%238A807E-%23D16D91-%23945430)
+> - ***PLEASE SEE THE PACKAGE <u>VIGNETTE</u> FOR MORE DETAILED
+>   EXAMPLES***
 
 <br>
 
@@ -69,9 +64,23 @@ You can install the development version of styles.cmac from
 
 ``` r
 # Install devtools if not installed (for GitHub Package)
-if (!require("devtools"))   install.packages("devtools")
+if (!require("devtools")) install.packages("devtools")
 
 devtools::install_github("CN-OIMSF/styles.cmac")
+```
+
+## Viewing the Vignette
+
+``` r
+# see what is available
+browseVignettes('styles.cmac')
+```
+
+    starting httpd help server ... done
+
+``` r
+# To view it then run: 
+vignette("intro-to-package", package = "styles.cmac")
 ```
 
 ## Examples
@@ -98,7 +107,7 @@ basePlot <- ggplot(data = mtcars,
 basePlot # Display
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-3-1.png)
+![](README_files/figure-commonmark/unnamed-chunk-4-1.png)
 
 ### Use Multiple Colors
 
@@ -116,7 +125,7 @@ basePlot +
   theme_cmac()
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-4-1.png)
+![](README_files/figure-commonmark/unnamed-chunk-5-1.png)
 
 #### Override Color with Fill
 
@@ -132,7 +141,7 @@ basePlot +
   theme_cmac()
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-5-1.png)
+![](README_files/figure-commonmark/unnamed-chunk-6-1.png)
 
 ### Use only `1` Color
 
@@ -149,7 +158,7 @@ basePlot +
   theme_cmac()
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-6-1.png)
+![](README_files/figure-commonmark/unnamed-chunk-7-1.png)
 
 ### How to use Times New Roman
 
@@ -165,7 +174,7 @@ basePlot +
   theme_cmac(inTimesNewRoman = TRUE)
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-7-1.png)
+![](README_files/figure-commonmark/unnamed-chunk-8-1.png)
 
 ## Colors Deep Dive
 
@@ -211,9 +220,9 @@ scale_cmac('blue', displayNames = TRUE)
 scale_cmac('gray', displayNames = TRUE)
 ```
 
-        white     gray1     gray2     gray3     gray4     gray5     gray6     gray7 
+        white    gray10     gray9     gray8     gray7     gray6     gray5     gray4 
     "#FFFFFF" "#FAFAFA" "#F1F1F1" "#EAEAEA" "#D9D9D9" "#CFCECE" "#A6A6A6" "#646464" 
-        gray8     gray9    gray10 
+        gray3     gray2     gray1 
     "#444444" "#363636" "#222222" 
 
 #### Text, Grays, and Blues
@@ -253,7 +262,7 @@ scale_cmac('fill', 'red')
 scale_cmac('gray', 'gray3')
 ```
 
-    [1] "#EAEAEA"
+    [1] "#444444"
 
 ``` r
 # Single color from the base palette

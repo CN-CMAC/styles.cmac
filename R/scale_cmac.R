@@ -33,7 +33,7 @@ scale_cmac <- function(aesthetic = NULL, ..., displayNames = FALSE) {
 
   # Overrride for text colors
   textName      = 'text'
-  textColorName = 'gray7'
+  textColorName = 'gray4'
 
   colors <- c(...) # get colors from function params
 

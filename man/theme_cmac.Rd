@@ -4,10 +4,14 @@
 \alias{theme_cmac}
 \title{Create a CMAC Theme for ggplot}
 \usage{
-theme_cmac(inTimesNewRoman = FALSE)
+theme_cmac(inTimesNewRoman = FALSE, removeTopAndRightBorder = TRUE, ...)
 }
 \arguments{
 \item{inTimesNewRoman}{TRUE if plot in Times New Roman Font (Default), FALSE uses ggplot main font. Only works on Windows.}
+
+\item{removeTopAndRightBorder}{TRUE if remove right and top parts of border. Recomended FALSE if using small multiples.}
+
+\item{...}{Additional parameters that can be passed into the theme() function. Added last to theme.}
 }
 \value{
 The function returns a ggplot theme
@@ -26,6 +30,9 @@ ggplotObject <- ggplot(mtcars, aes(y=mpg, x=wt, color=as.factor(cyl))) +
 
 # Add the theme
 ggplotObject + theme_cmac()
+
+# Add the theme with additional optional theme parameters
+ggplotObject + theme_cmac(legend.position = 'right')
 
 }
 \seealso{
