@@ -20,7 +20,14 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-The `styles.cmac` package provides a suite of functions for color styling in `ggplot2`, with an emphasis on branding for CMAC. Notably, it includes a palette that is adapted from the Tableau 10 Palette. For a deeper dive into the package's colorblind-friendly design, visit the fill palette and color (*line*) palette URLs provided in the original document. This package is designed to streamline the usage of color palettes, with inspiration drawn from the Tableau 10 Palette. 
+The `styles.cmac` package provides a suite of functions for color styling in `ggplot2`, with an emphasis on branding for CMAC. Notably, it includes a palette that is adapted from the Tableau 10 Palette.  This package is designed to streamline the usage of color palettes, with inspiration drawn from the Tableau 10 Palette. 
+
+For a deeper dive into the package's colorblind-friendly design, visit the fill palette and color (*line*) palette URLs provided below. This gives an overview of what the palette looks like as a whole.
+
+-   See colorblind statistics for the [fill palette](https://davidmathlogic.com/colorblind/#%23BECDE0-%23FFD597-%23F6B7B4-%23BEE0D2-%23E4C6DC-%23BDDBE1-%23F7E5B3-%23DCDADA-%23FCC8DA-%23E5CFC5) and the [color (*line*) palette](https://davidmathlogic.com/colorblind/#%236388B4-%23E68900-%23EB4B43-%2354AC88-%23B07AA1-%233C9DAA-%23C5A952-%238A807E-%23D16D91-%23945430)
+
+-   [*Reference*: Original Tableau 10 Palette](https://www.tableau.com/blog/colors-upgrade-tableau-10-56782)
+
 
 ## Installation
 
@@ -31,7 +38,7 @@ If you want to use the latest version of `styles.cmac` from GitHub, ensure that 
 if (!require("devtools"))   install.packages("devtools")
 
 # Install styles.cmac from GitHub
-devtools::install_github("CN-OIMSF/styles.cmac")
+devtools::install_github("CN-CMAC/styles.cmac")
 ```
 
 ## Examples
@@ -103,7 +110,7 @@ basePlot + scale_color_cmac() + theme_cmac(removeTopAndRightBorder = FALSE) +
   facet_grid(~as.factor(cyl))
 ```
 
-### Use only `1` Color
+### Use only `1 color`
 
 Most of the time you only need one color. Here is an example of how you might get that.
 
@@ -119,7 +126,7 @@ basePlot +
 ```
 
 
-### Fill Colors
+### Adjusting `fill` Aesthetic
 
 Here are some examples of how you could use the fill colors in plots.
 
@@ -159,7 +166,7 @@ ggplotObject2 + scale_fill_cmac(overrideWithAccent = TRUE)
 ggplotObject2 + scale_fill_cmac(guide = 'none')
 ```
 
-### How to use Times New Roman
+### How to use *Times New Roman*
 
 > Use this setting for ***non-website*** reporting, i.e., PDF distribution.
 
@@ -200,7 +207,7 @@ scale_cmac('blue') # Grays that are in the brand
 scale_cmac('gray') # Blues that are in the brand
 ```
 
-### How to get `1` color?
+### How to get `1 color`?
 
 ```{r}
 # Single color from the fill palette
@@ -213,7 +220,7 @@ scale_cmac('gray', 'gray3')
 scale_cmac('blue', 'blue2')
 ```
 
-### How to get `>1` colors
+### How to get `> 1 colors`
 
 ```{r}
 # Get the first 3 colors in the line palette

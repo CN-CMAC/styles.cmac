@@ -9,9 +9,14 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Do this every time you make a change
+Do this every time you make a major change
 ```{r loading}
 library(devtools)
+library(quarto)
+```
+
+```{r updateDocumentation}
+quarto::quarto_render('README.qmd')
 ```
 
 ```{r checking}
@@ -30,9 +35,6 @@ devtools::install(build_vignettes = TRUE, upgrade = 'never')
 ```
 
 ```{r viewVignette}
-# view the vignette
-packageName  = "styles.cmac"
-vignetteName = "intro-to-package"
-
-vignette(vignetteName, package = packageName)
+# view the vignettes
+# browseVignettes("styles.cmac")
 ```

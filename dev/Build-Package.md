@@ -1,15 +1,46 @@
 Check and Build Package
 ================
 Daniel Carpenter
-2023-08-01
+2023-08-02
 
-Do this every time you make a change
+Do this every time you make a major change
 
 ``` r
 library(devtools)
 ```
 
     ## Loading required package: usethis
+
+``` r
+library(quarto)
+```
+
+``` r
+quarto::quarto_render('README.qmd')
+```
+
+    ## 
+    ## 
+    ## processing file: README.qmd
+    ##   |                                                           |                                                   |   0%  |                                                           |..                                                 |   3%                     |                                                           |....                                               |   7% (unnamed-chunk-1)   |                                                           |.....                                              |  10%                     |                                                           |.......                                            |  14% (unnamed-chunk-2)   |                                                           |.........                                          |  17%                     |                                                           |...........                                        |  21% (unnamed-chunk-3)   |                                                           |............                                       |  24%                     |                                                           |..............                                     |  28% (unnamed-chunk-4)   |                                                           |................                                   |  31%                     |                                                           |..................                                 |  34% (unnamed-chunk-5)   |                                                           |...................                                |  38%                     |                                                           |.....................                              |  41% (unnamed-chunk-6)   |                                                           |.......................                            |  45%                     |                                                           |.........................                          |  48% (unnamed-chunk-7)   |                                                           |..........................                         |  52%                     |                                                           |............................                       |  55% (unnamed-chunk-8)   |                                                           |..............................                     |  59%                     |                                                           |................................                   |  62% (unnamed-chunk-9)   |                                                           |.................................                  |  66%                     |                                                           |...................................                |  69% (unnamed-chunk-10)  |                                                           |.....................................              |  72%                     |                                                           |.......................................            |  76% (unnamed-chunk-11)  |                                                           |........................................           |  79%                     |                                                           |..........................................         |  83% (unnamed-chunk-12)  |                                                           |............................................       |  86%                     |                                                           |..............................................     |  90% (unnamed-chunk-13)  |                                                           |...............................................    |  93%                     |                                                           |.................................................  |  97% (unnamed-chunk-14)  |                                                           |...................................................| 100%                                                                                                                                
+    ## output file: README.knit.md
+    ## 
+    ## pandoc 
+    ##   to: >-
+    ##     commonmark+autolink_bare_uris+emoji+footnotes+gfm_auto_identifiers+pipe_tables+strikeout+task_lists+tex_math_dollars
+    ##   output-file: README.md
+    ##   standalone: true
+    ##   default-image-extension: png
+    ##   toc: true
+    ##   toc-depth: 3
+    ##   number-sections: true
+    ##   
+    ## metadata
+    ##   title: CMAC Brand in ggplot2 - Installation and Examples
+    ##   author: Daniel Carpenter
+    ##   editor: visual
+    ##   
+    ## Output created: README.md
 
 ``` r
 # Ensure there are no errors
@@ -30,7 +61,7 @@ devtools::check()
     ## • CXX14FLAGS: -Wall -pedantic
     ## • CXX17FLAGS: -Wall -pedantic
     ## • CXX20FLAGS: -Wall -pedantic
-    ## * checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\styles.cmac/DESCRIPTION' ... OK
+    ## * checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ... OK
     ## * preparing 'styles.cmac':
     ## * checking DESCRIPTION meta-information ... OK
     ## * installing the package to build vignettes
@@ -47,7 +78,7 @@ devtools::check()
     ## • _R_CHECK_FORCE_SUGGESTS_      : FALSE
     ## • NOT_CRAN                      : true
     ## ── R CMD check ─────────────────────────────────────────────────────────────────
-    ## * using log directory 'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpSkcZPG/styles.cmac.Rcheck'
+    ## * using log directory 'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpeaTHvv/styles.cmac.Rcheck'
     ## * using R version 4.2.3 (2023-03-15 ucrt)
     ## * using platform: x86_64-w64-mingw32 (64-bit)
     ## * using session charset: UTF-8
@@ -110,11 +141,11 @@ devtools::check()
     ## 
     ## Status: 1 NOTE
     ## See
-    ##   'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpSkcZPG/styles.cmac.Rcheck/00check.log'
+    ##   'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpeaTHvv/styles.cmac.Rcheck/00check.log'
     ## for details.
 
     ## ── R CMD check results ────────────────────────────────── styles.cmac 0.1.0 ────
-    ## Duration: 57.3s
+    ## Duration: 1m 1.8s
     ## 
     ## ❯ checking top-level files ... NOTE
     ##   Non-standard files/directories found at top level:
@@ -127,7 +158,7 @@ devtools::check()
 devtools::build()
 ```
 
-    ## * checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\styles.cmac/DESCRIPTION' ... OK
+    ## * checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ... OK
     ## * preparing 'styles.cmac':
     ## * checking DESCRIPTION meta-information ... OK
     ## * installing the package to build vignettes
@@ -138,14 +169,14 @@ devtools::build()
     ## * building 'styles.cmac_0.1.0.tar.gz'
     ## 
 
-    ## [1] "C:/Users/daniel.carpenter/Documents/GitHub/FPA-GitHub/styles.cmac_0.1.0.tar.gz"
+    ## [1] "C:/Users/daniel.carpenter/Documents/GitHub/FPA-GitHub/CN-CMAC/styles.cmac_0.1.0.tar.gz"
 
 ``` r
 # install the package and build the vignette
 devtools::install(build_vignettes = TRUE, upgrade = 'never')
 ```
 
-    ## * checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\styles.cmac/DESCRIPTION' ... OK
+    ## * checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ... OK
     ## * preparing 'styles.cmac':
     ## * checking DESCRIPTION meta-information ... OK
     ## * installing the package to build vignettes
@@ -156,7 +187,7 @@ devtools::install(build_vignettes = TRUE, upgrade = 'never')
     ## * building 'styles.cmac_0.1.0.tar.gz'
     ## 
     ## Running "C:/PROGRA~1/R/R-42~1.3/bin/x64/Rcmd.exe" INSTALL \
-    ##   "C:\Users\DANIEL~1.CAR\AppData\Local\Temp\RtmpSkcZPG/styles.cmac_0.1.0.tar.gz" \
+    ##   "C:\Users\DANIEL~1.CAR\AppData\Local\Temp\RtmpeaTHvv/styles.cmac_0.1.0.tar.gz" \
     ##   --install-tests 
     ## * installing to library 'C:/Users/daniel.carpenter/AppData/Local/R/win-library/4.2'
     ## * installing *source* package 'styles.cmac' ...
@@ -174,11 +205,6 @@ devtools::install(build_vignettes = TRUE, upgrade = 'never')
     ## * DONE (styles.cmac)
 
 ``` r
-# view the vignette
-packageName  = "styles.cmac"
-vignetteName = "intro-to-package"
-
-vignette(vignetteName, package = packageName)
+# view the vignettes
+# browseVignettes("styles.cmac")
 ```
-
-    ## starting httpd help server ... done

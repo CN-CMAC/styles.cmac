@@ -66,7 +66,7 @@ You can install the development version of styles.cmac from
 # Install devtools if not installed (for GitHub Package)
 if (!require("devtools")) install.packages("devtools")
 
-devtools::install_github("CN-OIMSF/styles.cmac", build_vignettes = TRUE)
+devtools::install_github("CN-CMAC/styles.cmac", build_vignettes = TRUE)
 ```
 
 ## Viewing the Vignette
@@ -75,11 +75,8 @@ To see in-depth documentation of the package, please uncomment and issue
 the following commands.
 
 ``` r
-# # see what is available
-# browseVignettes('styles.cmac')
-
-# # To view it then run: 
-# vignette("intro-to-package", package = "styles.cmac")
+# See what vignettes are available
+browseVignettes('styles.cmac')
 ```
 
 ## Examples
