@@ -101,13 +101,20 @@ basePlot + scale_color_cmac(guide = 'none') + theme_cmac()
 # You could also change the theme through the optional parameters
 # Add the theme with additional optional theme parameters
 basePlot + scale_color_cmac() + theme_cmac(legend.position = 'right')
+```
 
-# One other option is to add a full border around the chart
-# I recommend this option with faceting.
-# Note this example is only for demonstrating the borders. Faceting in this context
-# Is another issue in itself.
-basePlot + scale_color_cmac() + theme_cmac(removeTopAndRightBorder = FALSE) +
+
+Additional parameter called `borderMode` controls the theme borders.
+[Inspiration for facets came from 1.2.2 in this book.](https://socviz.co/lookatdata.html)
+```{r}
+# One other option is to remove the border when faceting
+# Note this example is only for demonstrating the borders. Faceting in
+# this context is another issue in itself. 
+basePlot + scale_color_cmac() + theme_cmac(borderMode = 'facet') +
   facet_grid(~as.factor(cyl))
+
+# Note you can also use 'borders' to add all border back.
+basePlot + scale_color_cmac() + theme_cmac(borderMode = 'borders')
 ```
 
 ### Use only `1 color`

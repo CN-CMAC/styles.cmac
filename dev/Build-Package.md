@@ -1,7 +1,7 @@
 Check and Build Package
 ================
 Daniel Carpenter
-2023-08-02
+2023-10-02
 
 Do this every time you make a major change
 
@@ -51,6 +51,7 @@ devtools::check()
 
     ## ℹ Updating styles.cmac documentation
     ## ℹ Loading styles.cmac
+    ## Writing ']8;;ide:run:pkgload::dev_help('theme_cmac')theme_cmac.Rd]8;;'
 
     ## 
     ## ══ Building ════════════════════════════════════════════════════════════════════
@@ -78,7 +79,7 @@ devtools::check()
     ## • _R_CHECK_FORCE_SUGGESTS_      : FALSE
     ## • NOT_CRAN                      : true
     ## ── R CMD check ─────────────────────────────────────────────────────────────────
-    ## * using log directory 'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpeaTHvv/styles.cmac.Rcheck'
+    ## * using log directory 'C:/Users/daniel.carpenter/AppData/Local/Temp/Rtmpm2qJlH/styles.cmac.Rcheck'
     ## * using R version 4.2.3 (2023-03-15 ucrt)
     ## * using platform: x86_64-w64-mingw32 (64-bit)
     ## * using session charset: UTF-8
@@ -119,7 +120,10 @@ devtools::check()
     ## * checking S3 generic/method consistency ... OK
     ## * checking replacement functions ... OK
     ## * checking foreign function calls ... OK
-    ## * checking R code for possible problems ... OK
+    ## * checking R code for possible problems ... NOTE
+    ## theme_cmac: no visible global function definition for 'alpha'
+    ## Undefined global functions or variables:
+    ##   alpha
     ## * checking Rd files ... OK
     ## * checking Rd metadata ... OK
     ## * checking Rd line widths ... OK
@@ -139,19 +143,24 @@ devtools::check()
     ## * checking for detritus in the temp directory ... OK
     ## * DONE
     ## 
-    ## Status: 1 NOTE
+    ## Status: 2 NOTEs
     ## See
-    ##   'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpeaTHvv/styles.cmac.Rcheck/00check.log'
+    ##   'C:/Users/daniel.carpenter/AppData/Local/Temp/Rtmpm2qJlH/styles.cmac.Rcheck/00check.log'
     ## for details.
 
     ## ── R CMD check results ────────────────────────────────── styles.cmac 0.1.0 ────
-    ## Duration: 1m 1.8s
+    ## Duration: 56.4s
     ## 
     ## ❯ checking top-level files ... NOTE
     ##   Non-standard files/directories found at top level:
     ##     'README.qmd' 'README_files' 'dev'
     ## 
-    ## 0 errors ✔ | 0 warnings ✔ | 1 note ✖
+    ## ❯ checking R code for possible problems ... NOTE
+    ##   theme_cmac: no visible global function definition for 'alpha'
+    ##   Undefined global functions or variables:
+    ##     alpha
+    ## 
+    ## 0 errors ✔ | 0 warnings ✔ | 2 notes ✖
 
 ``` r
 # Build the package
@@ -187,7 +196,7 @@ devtools::install(build_vignettes = TRUE, upgrade = 'never')
     ## * building 'styles.cmac_0.1.0.tar.gz'
     ## 
     ## Running "C:/PROGRA~1/R/R-42~1.3/bin/x64/Rcmd.exe" INSTALL \
-    ##   "C:\Users\DANIEL~1.CAR\AppData\Local\Temp\RtmpeaTHvv/styles.cmac_0.1.0.tar.gz" \
+    ##   "C:\Users\DANIEL~1.CAR\AppData\Local\Temp\Rtmpm2qJlH/styles.cmac_0.1.0.tar.gz" \
     ##   --install-tests 
     ## * installing to library 'C:/Users/daniel.carpenter/AppData/Local/R/win-library/4.2'
     ## * installing *source* package 'styles.cmac' ...

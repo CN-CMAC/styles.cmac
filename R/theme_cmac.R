@@ -3,7 +3,7 @@
 #' @return      The function returns a ggplot theme
 #'
 #' @param inTimesNewRoman TRUE if plot in Times New Roman Font (Default), FALSE uses ggplot main font. Only works on Windows.
-#' @param removeTopAndRightBorder TRUE if remove right and top parts of border. Recomended FALSE if using small multiples.
+#' @param borderMode the theme borderMode, depending on `default` use, `facet` usage, or `borders`.
 #' @param ... Additional parameters that can be passed into the theme() function. Added last to theme.
 #'
 #' @importFrom ggplot2 theme element_text element_blank element_line element_rect margin coord_cartesian theme_set unit
@@ -32,7 +32,7 @@
 
 
 # Define the function 'theme_cmac' to customize themes for ggplots
-theme_cmac <- function(inTimesNewRoman = FALSE, removeTopAndRightBorder = TRUE, ...) {
+theme_cmac <- function(inTimesNewRoman = FALSE, borderMode = 'default', ...) {
 
   # Define text and border colors
   borderCol     = scale_cmac('gray', 'gray7') # border and gridlines
@@ -42,6 +42,12 @@ theme_cmac <- function(inTimesNewRoman = FALSE, removeTopAndRightBorder = TRUE, 
   facetHeaderFill    = scale_cmac('gray', 'gray8') # Facet (small multiples) header fill
   yAxisGridlineColor = "grey97"                    # Horizontal y axis gridline color
 
+  # borderModel options
+  borderModes = list('default' = 'default',
+               'borders' = 'borders',
+               'facet'   = 'facet'
+  )
+
 
   # Left align title and caption
   alignment.left = theme(
@@ -50,7 +56,7 @@ theme_cmac <- function(inTimesNewRoman = FALSE, removeTopAndRightBorder = TRUE, 
     plot.caption.position = "plot"
   )
 
-  # Define a minimal theme for the plot
+  # Define a minimal theme for the plot (borders theme)
   baseTheme = theme(
 
     # Set panel background
@@ -94,8 +100,8 @@ theme_cmac <- function(inTimesNewRoman = FALSE, removeTopAndRightBorder = TRUE, 
 
   )
 
-  # Remove the top and right border
-  if (removeTopAndRightBorder) {
+  # Default theme: Remove the top and right border
+  if (borderMode == borderModes['default'] | borderMode == borderModes['facet']) {
     baseTheme = baseTheme +
       theme(
 
@@ -106,6 +112,27 @@ theme_cmac <- function(inTimesNewRoman = FALSE, removeTopAndRightBorder = TRUE, 
         axis.ticks.length = unit(0.10, "cm")
 
       )
+
+  }
+
+  # Theme for facetting
+  if (borderMode == borderModes['facet']) {
+    baseTheme = baseTheme +
+      theme(
+        legend.position    = 'none',
+        strip.background   = element_blank(),
+        axis.line          = element_blank(),
+        axis.ticks.length = unit(4, 'pt'),
+        panel.grid         = element_blank(),
+        panel.grid.major.y = element_line(color = alpha(scale_cmac('fill', 'gray'), 0.8)),
+        panel.spacing.x    = unit(10, "pt")
+      )
+
+  }
+
+  # No borderMode found
+  if (!(borderMode %in% borderModes) ) {
+    warning("Parameter `borderMode` must be one of 'default', 'borders', or 'facet'. Using borderMode = 'default'.")
   }
 
   # Avoid clipping of the plot

@@ -1,41 +1,30 @@
-CMAC Brand in ggplot2 - Installation and Examples
-================
+# CMAC Brand in ggplot2 - Installation and Examples
 Daniel Carpenter
 
-- <a href="#styles.cmac" id="toc-styles.cmac"><span
-  class="toc-section-number">1</span> <code>styles.cmac</code></a>
-  - <a href="#overview" id="toc-overview"><span
-    class="toc-section-number">1.1</span> Overview</a>
-  - <a href="#installation-of-package"
-    id="toc-installation-of-package"><span
-    class="toc-section-number">1.2</span> Installation of Package</a>
-  - <a href="#viewing-the-vignette" id="toc-viewing-the-vignette"><span
-    class="toc-section-number">1.3</span> Viewing the Vignette</a>
-  - <a href="#examples" id="toc-examples"><span
-    class="toc-section-number">1.4</span> Examples</a>
-    - <a href="#create-a-basic-plot-structure"
-      id="toc-create-a-basic-plot-structure"><span
-      class="toc-section-number">1.4.1</span> Create a basic plot
-      structure</a>
-    - <a href="#use-multiple-colors" id="toc-use-multiple-colors"><span
-      class="toc-section-number">1.4.2</span> Use Multiple Colors</a>
-    - <a href="#use-only-1-color" id="toc-use-only-1-color"><span
-      class="toc-section-number">1.4.3</span> Use only <code>1</code>
-      Color</a>
-    - <a href="#how-to-use-times-new-roman"
-      id="toc-how-to-use-times-new-roman"><span
-      class="toc-section-number">1.4.4</span> How to use Times New Roman</a>
-  - <a href="#colors-deep-dive" id="toc-colors-deep-dive"><span
-    class="toc-section-number">1.5</span> Colors Deep Dive</a>
-    - <a href="#what-colors-are-available"
-      id="toc-what-colors-are-available"><span
-      class="toc-section-number">1.5.1</span> What Colors are Available?</a>
-    - <a href="#how-to-get-1-color" id="toc-how-to-get-1-color"><span
-      class="toc-section-number">1.5.2</span> How to get <code>1</code>
-      color?</a>
-    - <a href="#how-to-get-1-colors" id="toc-how-to-get-1-colors"><span
-      class="toc-section-number">1.5.3</span> How to get <code>&gt;1</code>
-      colors</a>
+- [<span class="toc-section-number">1</span>
+  `styles.cmac`](#styles.cmac)
+  - [<span class="toc-section-number">1.1</span> Overview](#overview)
+  - [<span class="toc-section-number">1.2</span> Installation of
+    Package](#installation-of-package)
+  - [<span class="toc-section-number">1.3</span> Viewing the
+    Vignette](#viewing-the-vignette)
+  - [<span class="toc-section-number">1.4</span> Examples](#examples)
+    - [<span class="toc-section-number">1.4.1</span> Create a basic plot
+      structure](#create-a-basic-plot-structure)
+    - [<span class="toc-section-number">1.4.2</span> Use Multiple
+      Colors](#use-multiple-colors)
+    - [<span class="toc-section-number">1.4.3</span> Use only `1`
+      Color](#use-only-1-color)
+    - [<span class="toc-section-number">1.4.4</span> How to use Times
+      New Roman](#how-to-use-times-new-roman)
+  - [<span class="toc-section-number">1.5</span> Colors Deep
+    Dive](#colors-deep-dive)
+    - [<span class="toc-section-number">1.5.1</span> What Colors are
+      Available?](#what-colors-are-available)
+    - [<span class="toc-section-number">1.5.2</span> How to get `1`
+      color?](#how-to-get-1-color)
+    - [<span class="toc-section-number">1.5.3</span> How to get `>1`
+      colors](#how-to-get-1-colors)
 
 # `styles.cmac`
 
