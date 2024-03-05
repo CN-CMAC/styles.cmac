@@ -2,8 +2,6 @@
 #' @description Gets the times new roman family equivielent across systems
 #' @return      The function returns a font family as a string.
 #'
-#' @importFrom grDevices windowsFonts
-#'
 #' @export getTimesNewRomanFamily
 #'
 #' @examples
@@ -30,7 +28,7 @@ getTimesNewRomanFamily <- function() {
     newFont  = "Times"            # simplified name for objects
 
     # Load and create "Times" font using Times New Roman
-    windowsFonts(Times = grDevices::windowsFont(cmacFont))
+    grDevices::windowsFonts(Times = grDevices::windowsFont(cmacFont))
 
   # Else use linux font
   } else {
