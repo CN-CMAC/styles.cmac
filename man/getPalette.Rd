@@ -7,6 +7,8 @@
 getPalette(
   aesthetic,
   colors,
+  colorOffset = 0,
+  reverseOrder = FALSE,
   displayNames = FALSE,
   fileSuffix = "-colors",
   fileExtension = ".csv",
@@ -18,6 +20,10 @@ getPalette(
 \item{aesthetic}{The name of the aesthetic}
 
 \item{colors}{A vector of color names}
+
+\item{colorOffset}{Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.}
+
+\item{reverseOrder}{TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
 
 \item{displayNames}{Logical, if TRUE display names of the colors}
 

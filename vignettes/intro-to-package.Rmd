@@ -187,6 +187,18 @@ basePlot +
   theme_cmac(inTimesNewRoman = TRUE)
 ```
 
+
+### Offset or Reverse Order of Colors
+
+```{r}
+# Offset the colors by 1
+basePlot + scale_color_cmac(colorOffset = 1)
+
+# reverse the order of the palette
+basePlot + scale_color_cmac(reverseOrder = TRUE)
+```
+
+
 ## Colors Deep Dive
 
 This section take a closer look at the colors that are available to us in the `styles.cmac` package. 

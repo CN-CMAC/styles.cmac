@@ -17,6 +17,8 @@ Daniel Carpenter
       Color](#use-only-1-color)
     - [<span class="toc-section-number">1.4.4</span> How to use Times
       New Roman](#how-to-use-times-new-roman)
+    - [<span class="toc-section-number">1.4.5</span> Offset or Reverse
+      Order of Colors](#offset-or-reverse-order-of-colors)
   - [<span class="toc-section-number">1.5</span> Colors Deep
     Dive](#colors-deep-dive)
     - [<span class="toc-section-number">1.5.1</span> What Colors are
@@ -160,6 +162,22 @@ basePlot +
 ```
 
 ![](README_files/figure-commonmark/unnamed-chunk-8-1.png)
+
+### Offset or Reverse Order of Colors
+
+``` r
+# Offset the colors by 1
+basePlot + scale_color_cmac(colorOffset = 1)
+```
+
+![](README_files/figure-commonmark/unnamed-chunk-9-1.png)
+
+``` r
+# reverse the order of the palette
+basePlot + scale_color_cmac(reverseOrder = TRUE)
+```
+
+![](README_files/figure-commonmark/unnamed-chunk-9-2.png)
 
 ## Colors Deep Dive
 

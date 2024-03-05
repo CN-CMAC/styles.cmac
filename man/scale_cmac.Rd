@@ -7,12 +7,22 @@ This is done separately just to reduce noise in the file
 Mainly, this just either displays the names of the colors or not when returing
 It also allows you to return 1 or all of the colors}
 \usage{
-scale_cmac(aesthetic = NULL, ..., displayNames = FALSE)
+scale_cmac(
+  aesthetic = NULL,
+  ...,
+  colorOffset = 0,
+  reverseOrder = FALSE,
+  displayNames = FALSE
+)
 }
 \arguments{
 \item{aesthetic}{Color aesthetic in 'fill', 'color', 'base', 'text','border','background', or 'grayedOut'}
 
 \item{...}{single or vector of colors}
+
+\item{colorOffset}{Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.}
+
+\item{reverseOrder}{TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
 
 \item{displayNames}{TRUE if you want to see the names of each color. Default FALSE.}
 }

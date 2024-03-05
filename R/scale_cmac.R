@@ -4,8 +4,10 @@
 #' It also allows you to return 1 or all of the colors
 #'
 #' @param aesthetic Color aesthetic in 'fill', 'color', 'base', 'text','border','background', or 'grayedOut'
-#' @param ... single or vector of colors
+#' @param colorOffset Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.
+#' @param reverseOrder TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.
 #' @param displayNames TRUE if you want to see the names of each color. Default FALSE.
+#' @param ... single or vector of colors
 #'
 #' @return hex codes of a subsetted CMAC palette
 #'
@@ -29,7 +31,12 @@
 
 
 
-scale_cmac <- function(aesthetic = NULL, ..., displayNames = FALSE) {
+scale_cmac <- function(aesthetic    = NULL,
+                       ...,
+                       colorOffset  = 0,
+                       reverseOrder = FALSE,
+                       displayNames = FALSE
+                       ) {
 
   # Overrride for text colors
   textName      = 'text'
@@ -62,6 +69,11 @@ scale_cmac <- function(aesthetic = NULL, ..., displayNames = FALSE) {
     if (aesthetic == textName) { return(getTextCol()) }
 
     # Else return a subsetted palette
-    else return( getPalette(aesthetic, colors, displayNames = displayNames) )
+    else return( getPalette(aesthetic, colors,
+                            displayNames = displayNames,
+                            colorOffset = colorOffset,
+                            reverseOrder = reverseOrder
+                            )
+                 )
   }
 }

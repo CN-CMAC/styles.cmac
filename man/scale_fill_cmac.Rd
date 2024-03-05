@@ -4,10 +4,19 @@
 \alias{scale_fill_cmac}
 \title{CMAC ggplot Fill Scale}
 \usage{
-scale_fill_cmac(overrideWithAccent = FALSE, ...)
+scale_fill_cmac(
+  overrideWithAccent = FALSE,
+  colorOffset = 0,
+  reverseOrder = FALSE,
+  ...
+)
 }
 \arguments{
 \item{overrideWithAccent}{TRUE if you want to use the color palette for the fill mapping. (Default FALSE)}
+
+\item{colorOffset}{Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.}
+
+\item{reverseOrder}{TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
 
 \item{...}{Additional parameters passed to either scale_color_manual or scale_fill_manual functions, such as guide = 'none'}
 }
@@ -36,6 +45,12 @@ ggplotObject + scale_fill_cmac(overrideWithAccent = TRUE)
 
 # Add the fill color and turn off legend with optional parameter
 ggplotObject + scale_fill_cmac(guide = 'none')
+
+# Offset the colors by 1
+ggplotObject + scale_fill_cmac(colorOffset = 1)
+
+# reverse the order of the palette
+ggplotObject + scale_fill_cmac(reverseOrder = TRUE)
 
 }
 \seealso{
