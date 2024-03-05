@@ -4,7 +4,6 @@
 #'
 #' @param inTimesNewRoman TRUE if plot in Times New Roman Font (Default), FALSE uses ggplot main font. Only works on Windows.
 #' @param borderMode the theme borderMode, depending on `default` use, `facet` usage, or `borders`.
-#' @param forceTimesNewRoman TRUE if you want to force Times New Roman. Default FALSE to allow user to understand warnings. TNR does not work on base linux machines.
 #' @param ... Additional parameters that can be passed into the theme() function. Added last to theme.
 #'
 #' @importFrom ggplot2 theme element_text element_blank element_line element_rect margin coord_cartesian theme_set unit
@@ -33,9 +32,7 @@
 
 
 # Define the function 'theme_cmac' to customize themes for ggplots
-theme_cmac <- function(inTimesNewRoman = FALSE, borderMode = 'default',
-                       forceTimesNewRoman = FALSE,
-                       ...) {
+theme_cmac <- function(inTimesNewRoman = FALSE, borderMode = 'default', ...) {
 
   # Define text and border colors
   borderCol     = scale_cmac('gray', 'gray7') # border and gridlines
@@ -144,39 +141,16 @@ theme_cmac <- function(inTimesNewRoman = FALSE, borderMode = 'default',
   # Combine all the defined theme elements
   theme_CMAC = baseTheme + alignment.left
 
-  # Enable times new roman if not on windows
-  isWindows  <- function() {
+  # If wanting times new roman then set it
+  if (inTimesNewRoman) {
 
-    # If forcing TNR, then say it is Windows
-    if (forceTimesNewRoman) {
-      return(TRUE)
-
-    # Else check for windows
-    } else {
-      sys_info <- Sys.info()
-      os_type  <- sys_info['sysname']
-
-      return(os_type == "Windows")
-    }
-  }
-
-  # If on windows and using times new roman then set it
-  if (isWindows() & inTimesNewRoman) {
-    # Specify font settings
-    cmacFont = "Times New Roman"  # font to be loaded
-    newFont  = "Times"            # simplified name for objects
-
-    # Load and create "Times" font using Times New Roman
-    grDevices::windowsFonts(Times = grDevices::windowsFont(cmacFont))
+    timesNewRoman <- getTimesNewRomanFamily()
 
     # Create a ggplot object for Times New Roman with default 12 pt font
-    font.TimesNewRoman = theme(text = element_text(family = newFont, size = 12))
+    font.TimesNewRoman = theme(text = element_text(family = timesNewRoman, size = 12))
 
     # Change to times new roman
     theme_CMAC = theme_CMAC + font.TimesNewRoman
-
-  } else if  (!isWindows() & inTimesNewRoman) {
-    warning('Since you are not on Windows, Times New Roman will not load correctly.')
   }
 
   # Anything else passed through parameters added last

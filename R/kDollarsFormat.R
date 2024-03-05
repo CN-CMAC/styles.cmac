@@ -11,6 +11,7 @@
 #' @export kDollarsFormat
 #'
 #' @importFrom scales dollar
+#' @importFrom utils stack
 #'
 #' @examples
 #' kDollarsFormat(1000, scaleUnit = 'K')

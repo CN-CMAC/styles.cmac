@@ -4,19 +4,12 @@
 \alias{theme_cmac}
 \title{Create a CMAC Theme for ggplot}
 \usage{
-theme_cmac(
-  inTimesNewRoman = FALSE,
-  borderMode = "default",
-  forceTimesNewRoman = FALSE,
-  ...
-)
+theme_cmac(inTimesNewRoman = FALSE, borderMode = "default", ...)
 }
 \arguments{
 \item{inTimesNewRoman}{TRUE if plot in Times New Roman Font (Default), FALSE uses ggplot main font. Only works on Windows.}
 
 \item{borderMode}{the theme borderMode, depending on `default` use, `facet` usage, or `borders`.}
-
-\item{forceTimesNewRoman}{TRUE if you want to force Times New Roman. Default FALSE to allow user to understand warnings. TNR does not work on base linux machines.}
 
 \item{...}{Additional parameters that can be passed into the theme() function. Added last to theme.}
 }
