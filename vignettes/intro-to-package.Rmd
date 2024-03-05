@@ -199,6 +199,18 @@ basePlot + scale_color_cmac(reverseOrder = TRUE)
 ```
 
 
+## Numeric Formats
+> Mainly for quick financial axis formatting
+
+```{r}
+# kDollarsFormat(1000,          scaleUnit = 'K')
+# kDollarsFormat(1000000,       scaleUnit = 'M')
+# kDollarsFormat(1000000000,    scaleUnit = 'B')
+# kDollarsFormat(1500000000000, scaleUnit = 'T')
+# kDollarsFormat(1000000,       scaleUnit = 'M', useDollarSign = FALSE)
+```
+
+
 ## Colors Deep Dive
 
 This section take a closer look at the colors that are available to us in the `styles.cmac` package. 

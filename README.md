@@ -19,13 +19,15 @@ Daniel Carpenter
       New Roman](#how-to-use-times-new-roman)
     - [<span class="toc-section-number">1.4.5</span> Offset or Reverse
       Order of Colors](#offset-or-reverse-order-of-colors)
-  - [<span class="toc-section-number">1.5</span> Colors Deep
+  - [<span class="toc-section-number">1.5</span> Numeric
+    Formats](#numeric-formats)
+  - [<span class="toc-section-number">1.6</span> Colors Deep
     Dive](#colors-deep-dive)
-    - [<span class="toc-section-number">1.5.1</span> What Colors are
+    - [<span class="toc-section-number">1.6.1</span> What Colors are
       Available?](#what-colors-are-available)
-    - [<span class="toc-section-number">1.5.2</span> How to get `1`
+    - [<span class="toc-section-number">1.6.2</span> How to get `1`
       color?](#how-to-get-1-color)
-    - [<span class="toc-section-number">1.5.3</span> How to get `>1`
+    - [<span class="toc-section-number">1.6.3</span> How to get `>1`
       colors](#how-to-get-1-colors)
 
 # `styles.cmac`
@@ -178,6 +180,40 @@ basePlot + scale_color_cmac(reverseOrder = TRUE)
 ```
 
 ![](README_files/figure-commonmark/unnamed-chunk-9-2.png)
+
+## Numeric Formats
+
+> Mainly for quick financial axis formatting
+
+``` r
+kDollarsFormat(1000,          scaleUnit = 'K')
+```
+
+    [1] "$1 K"
+
+``` r
+kDollarsFormat(1000000,       scaleUnit = 'M')
+```
+
+    [1] "$1 M"
+
+``` r
+kDollarsFormat(1000000000,    scaleUnit = 'B')
+```
+
+    [1] "$1 B"
+
+``` r
+kDollarsFormat(1500000000000, scaleUnit = 'T')
+```
+
+    [1] "$1.50 T"
+
+``` r
+kDollarsFormat(1000000,       scaleUnit = 'M', useDollarSign = FALSE)
+```
+
+    [1] "1 M"
 
 ## Colors Deep Dive
 

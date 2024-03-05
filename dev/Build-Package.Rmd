@@ -15,6 +15,11 @@ library(devtools)
 library(quarto)
 ```
 
+```{r updateMetaData}
+load_all()
+document()
+```
+
 ```{r updateDocumentation}
 quarto::quarto_render('README.qmd')
 ```
