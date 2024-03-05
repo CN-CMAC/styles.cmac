@@ -4,6 +4,7 @@
 #'
 #' @param inTimesNewRoman TRUE if plot in Times New Roman Font (Default), FALSE uses ggplot main font. Only works on Windows.
 #' @param borderMode the theme borderMode, depending on `default` use, `facet` usage, or `borders`.
+#' @param forceTimesNewRoman TRUE if you want to force Times New Roman. Default FALSE to allow user to understand warnings. TNR does not work on base linux machines.
 #' @param ... Additional parameters that can be passed into the theme() function. Added last to theme.
 #'
 #' @importFrom ggplot2 theme element_text element_blank element_line element_rect margin coord_cartesian theme_set unit
@@ -32,7 +33,9 @@
 
 
 # Define the function 'theme_cmac' to customize themes for ggplots
-theme_cmac <- function(inTimesNewRoman = FALSE, borderMode = 'default', ...) {
+theme_cmac <- function(inTimesNewRoman = FALSE, borderMode = 'default',
+                       forceTimesNewRoman = FALSE,
+                       ...) {
 
   # Define text and border colors
   borderCol     = scale_cmac('gray', 'gray7') # border and gridlines
@@ -143,9 +146,18 @@ theme_cmac <- function(inTimesNewRoman = FALSE, borderMode = 'default', ...) {
 
   # Enable times new roman if not on windows
   isWindows  <- function() {
-    sys_info <- Sys.info()
-    os_type  <- sys_info['sysname']
-    return(os_type == "Windows")
+
+    # If forcing TNR, then say it is Windows
+    if (forceTimesNewRoman) {
+      return(TRUE)
+
+    # Else check for windows
+    } else {
+      sys_info <- Sys.info()
+      os_type  <- sys_info['sysname']
+
+      return(os_type == "Windows")
+    }
   }
 
   # If on windows and using times new roman then set it
