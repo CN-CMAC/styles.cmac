@@ -117,6 +117,8 @@ basePlot +
 
 > Use this setting for ***non-website*** reporting.
 
+
+#### Non-Label Font Control
 ```{r}
 basePlot +
   
@@ -124,6 +126,24 @@ basePlot +
   scale_color_cmac() +
   
   # Get the CMAC ggplot theme
+  theme_cmac(inTimesNewRoman = TRUE)
+```
+
+
+#### Label Font Control
+```{r}
+basePlot + 
+  
+  geom_text(aes(label = paste(mpg)),
+            vjust = 1.2, hjust = -0.2,
+            size = 3.5,
+            
+            # ** IMPORTANT: theme() does not control text labels
+            # Need to set family to this font!
+            family = styles.cmac::getTimesNewRomanFamily()
+            ) + 
+  
+  # This controls all non-label fonts
   theme_cmac(inTimesNewRoman = TRUE)
 ```
 

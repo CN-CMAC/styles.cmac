@@ -14,4 +14,24 @@ Gets the times new roman family equivielent across systems
 }
 \examples{
 getTimesNewRomanFamily()
+
+library(ggplot2)
+library(styles.cmac)
+
+# Create basic ggplot object
+ggplot(mtcars, aes(y=mpg, x=wt, color=as.factor(cyl))) +
+
+  geom_point() +
+
+  geom_text(aes(label = paste(mpg)),
+            vjust = 1.2, hjust = -0.2,
+            size = 3,
+
+            # ** IMPORTANT: theme() does not control text labels
+            # Need to set family to this font!
+            family = styles.cmac::getTimesNewRomanFamily()
+  ) +
+
+  # This controls all non-label fonts
+  theme_cmac(inTimesNewRoman = TRUE)
 }

@@ -153,6 +153,8 @@ basePlot +
 
 > Use this setting for ***non-website*** reporting.
 
+#### Non-Label Font Control
+
 ``` r
 basePlot +
   
@@ -165,6 +167,26 @@ basePlot +
 
 ![](README_files/figure-commonmark/unnamed-chunk-8-1.png)
 
+#### Label Font Control
+
+``` r
+basePlot + 
+  
+  geom_text(aes(label = paste(mpg)),
+            vjust = 1.2, hjust = -0.2,
+            size = 3.5,
+            
+            # ** IMPORTANT: theme() does not control text labels
+            # Need to set family to this font!
+            family = styles.cmac::getTimesNewRomanFamily()
+            ) + 
+  
+  # This controls all non-label fonts
+  theme_cmac(inTimesNewRoman = TRUE)
+```
+
+![](README_files/figure-commonmark/unnamed-chunk-9-1.png)
+
 ### Offset or Reverse Order of Colors
 
 ``` r
@@ -172,14 +194,14 @@ basePlot +
 basePlot + scale_color_cmac(colorOffset = 1)
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-9-1.png)
+![](README_files/figure-commonmark/unnamed-chunk-10-1.png)
 
 ``` r
 # reverse the order of the palette
 basePlot + scale_color_cmac(reverseOrder = TRUE)
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-9-2.png)
+![](README_files/figure-commonmark/unnamed-chunk-10-2.png)
 
 ## Numeric Formats
 
