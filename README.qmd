@@ -117,8 +117,8 @@ basePlot +
 
 > Use this setting for ***non-website*** reporting.
 
-
 #### Non-Label Font Control
+
 ```{r}
 basePlot +
   
@@ -129,8 +129,8 @@ basePlot +
   theme_cmac(inTimesNewRoman = TRUE)
 ```
 
-
 #### Label Font Control
+
 ```{r}
 basePlot + 
   
@@ -157,8 +157,22 @@ basePlot + scale_color_cmac(colorOffset = 1)
 basePlot + scale_color_cmac(reverseOrder = TRUE)
 ```
 
+### Override the palette with a color blind palette
+
+```{r}
+# Use color blind friendly palette (works with fill too)
+basePlot + scale_color_cmac(useColorBlindPalette = TRUE)
+
+# Change the palette (can use cols4all::c4a_palettes() to try others)
+# Also, can demo others in GUI using cols4all::c4a()
+basePlot + scale_color_cmac(useColorBlindPalette = TRUE, 
+                            colorBlindPaletteName = 'safe')
+```
+
+
 
 ## Numeric Formats
+
 > Mainly for quick financial axis formatting
 
 ```{r}
@@ -168,7 +182,6 @@ kDollarsFormat(1000000000,    scaleUnit = 'B')
 kDollarsFormat(1500000000000, scaleUnit = 'T')
 kDollarsFormat(1000000,       scaleUnit = 'M', useDollarSign = FALSE)
 ```
-
 
 ## Colors Deep Dive
 

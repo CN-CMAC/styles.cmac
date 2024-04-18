@@ -18,7 +18,8 @@ Imports:
     ggplot2,
     stats,
     utils,
-    scales
+    scales,
+    cols4all
 RoxygenNote: 7.2.3
 Suggests: 
     grDevices,

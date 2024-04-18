@@ -19,6 +19,9 @@ Daniel Carpenter
       New Roman](#how-to-use-times-new-roman)
     - [<span class="toc-section-number">1.4.5</span> Offset or Reverse
       Order of Colors](#offset-or-reverse-order-of-colors)
+    - [<span class="toc-section-number">1.4.6</span> Override the
+      palette with a color blind
+      palette](#override-the-palette-with-a-color-blind-palette)
   - [<span class="toc-section-number">1.5</span> Numeric
     Formats](#numeric-formats)
   - [<span class="toc-section-number">1.6</span> Colors Deep
@@ -203,6 +206,24 @@ basePlot + scale_color_cmac(reverseOrder = TRUE)
 
 ![](README_files/figure-commonmark/unnamed-chunk-10-2.png)
 
+### Override the palette with a color blind palette
+
+``` r
+# Use color blind friendly palette (works with fill too)
+basePlot + scale_color_cmac(useColorBlindPalette = TRUE)
+```
+
+![](README_files/figure-commonmark/unnamed-chunk-11-1.png)
+
+``` r
+# Change the palette (can use cols4all::c4a_palettes() to try others)
+# Also, can demo others in GUI using cols4all::c4a()
+basePlot + scale_color_cmac(useColorBlindPalette = TRUE, 
+                            colorBlindPaletteName = 'safe')
+```
+
+![](README_files/figure-commonmark/unnamed-chunk-11-2.png)
+
 ## Numeric Formats
 
 > Mainly for quick financial axis formatting
@@ -253,9 +274,7 @@ scale_cmac('fill', displayNames = TRUE)
 ```
 
          blue    orange       red     green    purple     blue1    yellow      gray 
-    "#BECDE0" "#FFD597" "#F6B7B4" "#BEE0D2" "#E4C6DC" "#BDDBE1" "#F7E5B3" "#DCDADA" 
-         pink       tan 
-    "#FCC8DA" "#E5CFC5" 
+    "#BECDE0" "#FFD597" "#F6B7B4" "#BEE0D2" "#C7BBDB" "#FEE6BA" "#D0C3C5" "#B3BBC4" 
 
 #### Line colors
 
@@ -263,10 +282,8 @@ scale_cmac('fill', displayNames = TRUE)
 scale_cmac('color', displayNames = TRUE)
 ```
 
-         blue    orange       red     green    purple     blue1    yellow      gray 
-    "#6388B4" "#E68900" "#EB4B43" "#54AC88" "#B07AA1" "#3C9DAA" "#C5A952" "#8A807E" 
-         pink       tan 
-    "#D16D91" "#945430" 
+         blue    orange       red     green    purple    yellow   purple1      gray 
+    "#798BA2" "#D29843" "#C57774" "#80A998" "#A091B8" "#D6B984" "#B4AAAB" "#87919C" 
 
 #### Blue and Gray colors, like the background of slide decks
 
@@ -339,18 +356,18 @@ scale_cmac('blue', 'blue2')
 scale_cmac('color', 3)
 ```
 
-    [1] "#6388B4" "#E68900" "#EB4B43"
+    [1] "#798BA2" "#D29843" "#C57774"
 
 ``` r
 # Get the last 3 colors in the fill palette
 scale_cmac('color')[6:8]
 ```
 
-    [1] "#3C9DAA" "#C5A952" "#8A807E"
+    [1] "#D6B984" "#B4AAAB" "#87919C"
 
 ``` r
 # Or access specific colors all at once
 scale_cmac('color', 'blue', 'orange', 'green', 'yellow')
 ```
 
-    [1] "#6388B4" "#E68900" "#54AC88" "#C5A952"
+    [1] "#798BA2" "#D29843" "#80A998" "#D6B984"

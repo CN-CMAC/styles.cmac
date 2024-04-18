@@ -217,6 +217,18 @@ basePlot + scale_color_cmac(reverseOrder = TRUE)
 ```
 
 
+### Override the palette with a color blind palette
+
+```{r}
+# Use color blind friendly palette (works with fill too)
+basePlot + scale_color_cmac(useColorBlindPalette = TRUE)
+
+# Change the palette (can use cols4all::c4a_palettes() to try others)
+# Also, can demo others in GUI using cols4all::c4a()
+basePlot + scale_color_cmac(useColorBlindPalette = TRUE, 
+                            colorBlindPaletteName = 'safe')
+```
+
 ## Numeric Formats
 > Mainly for quick financial axis formatting
 

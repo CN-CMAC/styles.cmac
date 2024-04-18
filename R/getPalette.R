@@ -6,6 +6,8 @@
 #' @param colorOffset Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.
 #' @param reverseOrder TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.
 #' @param displayNames Logical, if TRUE display names of the colors
+#' @param useColorBlindPalette Logical, if TRUE uses color blind friendly palette instead of CMAC style.
+#' @param colorBlindPaletteName Name of colorblind friendly palette. Use `cols4all::c4a_palettes()` for available palettes.
 #' @param fileSuffix A suffix to be added to the file name (default: "-colors")
 #' @param fileExtension The extension of the file (default: ".csv")
 #' @param directoryOfPalette The directory of the palette data (default: "extdata")
@@ -15,6 +17,7 @@
 #'
 #' @importFrom stats setNames
 #' @importFrom utils read.csv
+#' @importFrom cols4all c4a
 
 
 
@@ -23,27 +26,38 @@ getPalette <- function(aesthetic, colors,
                        colorOffset        = 0,
                        reverseOrder       = FALSE,
                        displayNames       = FALSE,
+                       useColorBlindPalette = FALSE,
+                       colorBlindPaletteName = 'color_blind',
                        fileSuffix         = "-colors",
                        fileExtension      = '.csv',
                        directoryOfPalette = "extdata",
                        thisPackageName    = "styles.cmac"
                        ) {
 
-  ## Get the path of the palette
-  filename = paste0(aesthetic, fileSuffix, fileExtension)
-  filePathOfPalette <- system.file(directoryOfPalette,
-                                   filename,
-                                   package = thisPackageName)
+  # If using brand palette
+  if ( !(useColorBlindPalette) ) {
+
+    ## Get the path of the palette
+    filename = paste0(aesthetic, fileSuffix, fileExtension)
+    filePathOfPalette <- system.file(directoryOfPalette,
+                                     filename,
+                                     package = thisPackageName)
 
 
-  ## Read the palette in
-  thePalette_base <- as.list(read.csv(filePathOfPalette))
+    ## Read the palette in
+    thePalette_base <- as.list(read.csv(filePathOfPalette))
 
-  ## Convert to a named list
-  thePalette <- setNames(thePalette_base$hexCode, thePalette_base$color) |>
+    ## Convert to a named list
+    thePalette <- setNames(thePalette_base$hexCode, thePalette_base$color)
 
-    # Offset the palette if user specifics
-    offsetPalette(colorOffset = colorOffset)
+  # Using Color blind palette
+  } else {
+    thePalette <- rev(c4a(palette = colorBlindPaletteName))
+  }
+
+
+  # Offset the palette if user specifics
+  thePalette <- offsetPalette(thePalette, colorOffset = colorOffset)
 
   # Reverse order if user specifies
   if (reverseOrder) {
