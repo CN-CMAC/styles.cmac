@@ -19,7 +19,8 @@ Imports:
     stats,
     utils,
     scales,
-    cols4all
+    cols4all,
+    colorspace
 RoxygenNote: 7.2.3
 Suggests: 
     grDevices,

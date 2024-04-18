@@ -206,6 +206,25 @@ basePlot +
   theme_cmac(inTimesNewRoman = TRUE)
 ```
 
+### Darken Text when Over Filled Elements
+
+```{r}
+ggplot(mtcars, aes(y = mpg, x = wt, color = as.factor(cyl))) +
+  geom_point(aes(fill = as.factor(cyl)),
+             size = 10,
+             pch = 21,
+             color = 'transparent',
+             alpha = 0.9
+  ) +
+  geom_text(aes(label = round(mpg, 0))) +
+  scale_fill_cmac() +
+
+  # KEY - darken the text so that it is easier to view
+  # Over fill
+  scale_color_cmac(darkenPaletteForTextGeoms = TRUE) +
+  theme_cmac()
+```
+
 ### Offset or Reverse Order of Colors
 
 ```{r}

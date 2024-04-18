@@ -13,6 +13,7 @@ scale_cmac(
   colorOffset = 0,
   reverseOrder = FALSE,
   displayNames = FALSE,
+  darkenPaletteForTextGeoms = FALSE,
   useColorBlindPalette = FALSE,
   colorBlindPaletteName = "color_blind"
 )
@@ -27,6 +28,8 @@ scale_cmac(
 \item{reverseOrder}{TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
 
 \item{displayNames}{TRUE if you want to see the names of each color. Default FALSE.}
+
+\item{darkenPaletteForTextGeoms}{Logical, if TRUE then the palette will be darkened by 25 percent}
 
 \item{useColorBlindPalette}{Logical, if TRUE uses color blind friendly palette instead of CMAC style.}
 

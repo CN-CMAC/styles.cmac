@@ -5,6 +5,7 @@
 #' @param colors A vector of color names
 #' @param colorOffset Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.
 #' @param reverseOrder TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.
+#' @param darkenPaletteForTextGeoms Logical, if TRUE then the palette will be darkened by 25 percent
 #' @param displayNames Logical, if TRUE display names of the colors
 #' @param useColorBlindPalette Logical, if TRUE uses color blind friendly palette instead of CMAC style.
 #' @param colorBlindPaletteName Name of colorblind friendly palette. Use `cols4all::c4a_palettes()` for available palettes.
@@ -18,6 +19,7 @@
 #' @importFrom stats setNames
 #' @importFrom utils read.csv
 #' @importFrom cols4all c4a
+#' @importFrom colorspace darken
 
 
 
@@ -26,6 +28,7 @@ getPalette <- function(aesthetic, colors,
                        colorOffset        = 0,
                        reverseOrder       = FALSE,
                        displayNames       = FALSE,
+                       darkenPaletteForTextGeoms = FALSE,
                        useColorBlindPalette = FALSE,
                        colorBlindPaletteName = 'color_blind',
                        fileSuffix         = "-colors",
@@ -33,6 +36,9 @@ getPalette <- function(aesthetic, colors,
                        directoryOfPalette = "extdata",
                        thisPackageName    = "styles.cmac"
                        ) {
+
+  # Intensity to darken text
+  DARKEN_AMOUNT = 0.25
 
   # If using brand palette
   if ( !(useColorBlindPalette) ) {
@@ -55,13 +61,21 @@ getPalette <- function(aesthetic, colors,
     thePalette <- rev(c4a(palette = colorBlindPaletteName))
   }
 
-
   # Offset the palette if user specifics
   thePalette <- offsetPalette(thePalette, colorOffset = colorOffset)
 
   # Reverse order if user specifies
   if (reverseOrder) {
     thePalette <- rev(thePalette)
+  }
+
+  # Darken the palette by a set intensity for overlaying text on charts
+  if (darkenPaletteForTextGeoms & aesthetic == 'color') {
+    thePalette <- darken(thePalette, amount = DARKEN_AMOUNT)
+
+  # Warn the user if they try to darken a palette that is not the color aesthetic
+  } else if (darkenPaletteForTextGeoms & aesthetic != 'color') {
+      warning('Palette not darkened. Due to branding restriction, only darken the `color` aesthetic for text geoms. Fill aesthetic should not be darkened.')
   }
 
   return( subsetAndFormatPalette(colors, thePalette, displayNames) )

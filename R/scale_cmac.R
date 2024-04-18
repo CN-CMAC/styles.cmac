@@ -6,6 +6,7 @@
 #' @param aesthetic Color aesthetic in 'fill', 'color', 'base', 'text','border','background', or 'grayedOut'
 #' @param colorOffset Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.
 #' @param reverseOrder TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.
+#' @param darkenPaletteForTextGeoms Logical, if TRUE then the palette will be darkened by 25 percent
 #' @param displayNames TRUE if you want to see the names of each color. Default FALSE.
 #' @param useColorBlindPalette Logical, if TRUE uses color blind friendly palette instead of CMAC style.
 #' @param colorBlindPaletteName Name of colorblind friendly palette. Use `cols4all::c4a_palettes()` for available palettes.
@@ -41,6 +42,7 @@ scale_cmac <- function(aesthetic    = NULL,
                        colorOffset  = 0,
                        reverseOrder = FALSE,
                        displayNames = FALSE,
+                       darkenPaletteForTextGeoms = FALSE,
                        useColorBlindPalette = FALSE,
                        colorBlindPaletteName = 'color_blind'
                        ) {
@@ -80,6 +82,7 @@ scale_cmac <- function(aesthetic    = NULL,
                             displayNames          = displayNames,
                             colorOffset           = colorOffset,
                             reverseOrder          = reverseOrder,
+                            darkenPaletteForTextGeoms = darkenPaletteForTextGeoms,
                             useColorBlindPalette  = useColorBlindPalette,
                             colorBlindPaletteName = colorBlindPaletteName
                             )
