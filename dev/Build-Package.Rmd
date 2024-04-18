@@ -21,7 +21,7 @@ document()
 ```
 
 ```{r updateDocumentation}
-#quarto::quarto_render('README.qmd')
+quarto::quarto_render('README.qmd')
 ```
 
 ```{r checking}
@@ -36,7 +36,7 @@ devtools::build()
 
 ```{r installing}
 # install the package and build the vignette
-devtools::install(build_vignettes = FALSE, upgrade = 'never')
+devtools::install(build_vignettes = TRUE, upgrade = 'never')
 ```
 
 ```{r viewVignette}

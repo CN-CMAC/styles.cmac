@@ -17,9 +17,11 @@ Daniel Carpenter
       Color](#use-only-1-color)
     - [<span class="toc-section-number">1.4.4</span> How to use Times
       New Roman](#how-to-use-times-new-roman)
-    - [<span class="toc-section-number">1.4.5</span> Offset or Reverse
+    - [<span class="toc-section-number">1.4.5</span> Darken Text when
+      Over Filled Elements](#darken-text-when-over-filled-elements)
+    - [<span class="toc-section-number">1.4.6</span> Offset or Reverse
       Order of Colors](#offset-or-reverse-order-of-colors)
-    - [<span class="toc-section-number">1.4.6</span> Override the
+    - [<span class="toc-section-number">1.4.7</span> Override the
       palette with a color blind
       palette](#override-the-palette-with-a-color-blind-palette)
   - [<span class="toc-section-number">1.5</span> Numeric
@@ -190,6 +192,27 @@ basePlot +
 
 ![](README_files/figure-commonmark/unnamed-chunk-9-1.png)
 
+### Darken Text when Over Filled Elements
+
+``` r
+ggplot(mtcars, aes(y = mpg, x = wt, color = as.factor(cyl))) +
+  geom_point(aes(fill = as.factor(cyl)),
+             size = 10,
+             pch = 21,
+             color = 'transparent',
+             alpha = 0.9
+  ) +
+  geom_text(aes(label = round(mpg, 0))) +
+  scale_fill_cmac() +
+
+  # KEY - darken the text so that it is easier to view
+  # Over fill
+  scale_color_cmac(darkenPaletteForTextGeoms = TRUE) +
+  theme_cmac()
+```
+
+![](README_files/figure-commonmark/unnamed-chunk-10-1.png)
+
 ### Offset or Reverse Order of Colors
 
 ``` r
@@ -197,14 +220,14 @@ basePlot +
 basePlot + scale_color_cmac(colorOffset = 1)
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-10-1.png)
+![](README_files/figure-commonmark/unnamed-chunk-11-1.png)
 
 ``` r
 # reverse the order of the palette
 basePlot + scale_color_cmac(reverseOrder = TRUE)
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-10-2.png)
+![](README_files/figure-commonmark/unnamed-chunk-11-2.png)
 
 ### Override the palette with a color blind palette
 
@@ -213,7 +236,7 @@ basePlot + scale_color_cmac(reverseOrder = TRUE)
 basePlot + scale_color_cmac(useColorBlindPalette = TRUE)
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-11-1.png)
+![](README_files/figure-commonmark/unnamed-chunk-12-1.png)
 
 ``` r
 # Change the palette (can use cols4all::c4a_palettes() to try others)
@@ -222,7 +245,7 @@ basePlot + scale_color_cmac(useColorBlindPalette = TRUE,
                             colorBlindPaletteName = 'safe')
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-11-2.png)
+![](README_files/figure-commonmark/unnamed-chunk-12-2.png)
 
 ## Numeric Formats
 
@@ -273,7 +296,7 @@ kDollarsFormat(1000000,       scaleUnit = 'M', useDollarSign = FALSE)
 scale_cmac('fill', displayNames = TRUE)
 ```
 
-         blue    orange       red     green    purple     blue1    yellow      gray 
+         blue    orange       red     green    purple    yellow   purple1      gray 
     "#BECDE0" "#FFD597" "#F6B7B4" "#BEE0D2" "#C7BBDB" "#FEE6BA" "#D0C3C5" "#B3BBC4" 
 
 #### Line colors
