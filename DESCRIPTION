@@ -15,12 +15,14 @@ Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.1.0)
 Imports:
+    tidyverse,
     ggplot2,
     stats,
     utils,
     scales,
     cols4all,
-    colorspace
+    colorspace,
+    cowplot
 RoxygenNote: 7.2.3
 Suggests: 
     grDevices,

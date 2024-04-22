@@ -1,10 +1,10 @@
 ---
 title: "Palette Viewer"
-author: "Daniel Carpenter"
-
-output: 
-  rmarkdown::html_vignette:
-    toc: yes
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{simulate-palette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
@@ -12,17 +12,14 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.width = 8,
-  fig.height = 12,
-  warning = FALSE
+  fig.height = 12
 )
 ```
 
-```{r codeDetails}
-library(devtools); load_all(); document()
-library(ggplot2)
+```{r setup}
+library(styles.cmac)
 library(cowplot)
 library(tidyverse)
-library(purrr)
 library(colorspace)
 
 
