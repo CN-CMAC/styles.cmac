@@ -10,7 +10,7 @@ scale_color_cmac(
   reverseOrder = FALSE,
   darkenPaletteForTextGeoms = FALSE,
   useColorBlindPalette = FALSE,
-  colorBlindPaletteName = "color_blind",
+  colorBlindPaletteName = "safe",
   ...
 )
 }

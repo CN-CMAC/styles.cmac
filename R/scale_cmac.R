@@ -44,7 +44,7 @@ scale_cmac <- function(aesthetic    = NULL,
                        displayNames = FALSE,
                        darkenPaletteForTextGeoms = FALSE,
                        useColorBlindPalette = FALSE,
-                       colorBlindPaletteName = 'color_blind'
+                       colorBlindPaletteName = 'safe'
                        ) {
 
   # Overrride for text colors

@@ -68,7 +68,7 @@ scale_color_cmac <- function(overrideWithFill      = FALSE,
                              reverseOrder          = FALSE,
                              darkenPaletteForTextGeoms = FALSE,
                              useColorBlindPalette  = FALSE,
-                             colorBlindPaletteName = 'color_blind',
+                             colorBlindPaletteName = 'safe',
                              ...
                              )  {
 

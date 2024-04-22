@@ -12,7 +12,7 @@ getPalette(
   displayNames = FALSE,
   darkenPaletteForTextGeoms = FALSE,
   useColorBlindPalette = FALSE,
-  colorBlindPaletteName = "color_blind",
+  colorBlindPaletteName = "safe",
   fileSuffix = "-colors",
   fileExtension = ".csv",
   directoryOfPalette = "extdata",

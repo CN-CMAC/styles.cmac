@@ -15,7 +15,7 @@ scale_cmac(
   displayNames = FALSE,
   darkenPaletteForTextGeoms = FALSE,
   useColorBlindPalette = FALSE,
-  colorBlindPaletteName = "color_blind"
+  colorBlindPaletteName = "safe"
 )
 }
 \arguments{

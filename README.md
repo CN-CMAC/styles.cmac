@@ -297,7 +297,7 @@ scale_cmac('fill', displayNames = TRUE)
 ```
 
          blue    orange       red     green    purple    yellow   purple1      gray 
-    "#BECDE0" "#FFD597" "#F6B7B4" "#BEE0D2" "#C7BBDB" "#FEE6BA" "#D0C3C5" "#B3BBC4" 
+    "#C0D0E4" "#FFD29A" "#FFB5B3" "#B9DDCF" "#CBC5EA" "#F2D4A0" "#DDC9CB" "#CCCED6" 
 
 #### Line colors
 
@@ -306,7 +306,7 @@ scale_cmac('color', displayNames = TRUE)
 ```
 
          blue    orange       red     green    purple    yellow   purple1      gray 
-    "#798BA2" "#D29843" "#C57774" "#80A998" "#A091B8" "#D6B984" "#B4AAAB" "#87919C" 
+    "#8797ab" "#d6a55c" "#c3726f" "#87ab9d" "#8d87ab" "#c2a570" "#a38f91" "#828591" 
 
 #### Blue and Gray colors, like the background of slide decks
 
@@ -356,7 +356,7 @@ scale_cmac('gray') # Blues that are in the brand
 scale_cmac('fill', 'red')
 ```
 
-    [1] "#F6B7B4"
+    [1] "#FFB5B3"
 
 ``` r
 # Single color from the base palette
@@ -379,18 +379,18 @@ scale_cmac('blue', 'blue2')
 scale_cmac('color', 3)
 ```
 
-    [1] "#798BA2" "#D29843" "#C57774"
+    [1] "#8797ab" "#d6a55c" "#c3726f"
 
 ``` r
 # Get the last 3 colors in the fill palette
 scale_cmac('color')[6:8]
 ```
 
-    [1] "#D6B984" "#B4AAAB" "#87919C"
+    [1] "#c2a570" "#a38f91" "#828591"
 
 ``` r
 # Or access specific colors all at once
 scale_cmac('color', 'blue', 'orange', 'green', 'yellow')
 ```
 
-    [1] "#798BA2" "#D29843" "#80A998" "#D6B984"
+    [1] "#8797ab" "#d6a55c" "#87ab9d" "#c2a570"
