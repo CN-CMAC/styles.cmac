@@ -217,7 +217,7 @@ ggplot(mtcars, aes(y = mpg, x = wt, color = as.factor(cyl))) +
 
 ``` r
 # Offset the colors by 1
-basePlot + scale_color_cmac(colorOffset = 1)
+basePlot + scale_color_cmac(colorOffset = 5)
 ```
 
 ![](README_files/figure-commonmark/unnamed-chunk-11-1.png)
