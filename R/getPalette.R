@@ -58,7 +58,7 @@ getPalette <- function(aesthetic, colors,
 
   # Using Color blind palette
   } else {
-    thePalette <- rev(c4a(palette = colorBlindPaletteName))
+    thePalette <- c4a(palette = colorBlindPaletteName)
   }
 
   # Offset the palette if user specifics

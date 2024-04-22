@@ -27,9 +27,6 @@ document()
 
     ## ℹ Updating styles.cmac documentation
     ## ℹ Loading styles.cmac
-    ## Writing 'getPalette.Rd'
-    ## Writing 'scale_cmac.Rd'
-    ## Writing 'scale_color_cmac.Rd'
 
 ``` r
 quarto::quarto_render('README.qmd')
@@ -77,12 +74,12 @@ devtools::check()
     ## • CXX14FLAGS: -Wall -pedantic
     ## • CXX17FLAGS: -Wall -pedantic
     ## • CXX20FLAGS: -Wall -pedantic
-    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (412ms)
-    ##       ─  preparing 'styles.cmac': (6s)
+    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (415ms)
+    ##       ─  preparing 'styles.cmac': (6.4s)
     ##    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##       ─  installing the package to build vignettes
-    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (16.1s)
-    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.1s)
+    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (16.5s)
+    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.2s)
     ##   ─  checking for empty or unneeded directories
     ##      Omitted 'LazyData' from DESCRIPTION
     ##       ─  building 'styles.cmac_0.1.0.tar.gz'
@@ -94,78 +91,81 @@ devtools::check()
     ## • _R_CHECK_FORCE_SUGGESTS_      : FALSE
     ## • NOT_CRAN                      : true
     ## ── R CMD check ─────────────────────────────────────────────────────────────────
-    ##       ─  using log directory 'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpkzPwUl/styles.cmac.Rcheck' (442ms)
+    ##       ─  using log directory 'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpOWcWIM/styles.cmac.Rcheck' (438ms)
     ## ─  using R version 4.2.3 (2023-03-15 ucrt)
     ## ─  using platform: x86_64-w64-mingw32 (64-bit)
     ## ─  using session charset: UTF-8
-    ##       ─  using options '--no-manual --as-cran' (430ms)
+    ##       ─  using options '--no-manual --as-cran' (405ms)
     ##   ✔  checking for file 'styles.cmac/DESCRIPTION'
     ## ─  checking extension type ... Package
     ## ─  this is package 'styles.cmac' version '0.1.0'
     ## ─  package encoding: UTF-8
-    ##    checking package namespace information ...  ✔  checking package namespace information
-    ##    checking package dependencies ...     checking package dependencies ...   ✔  checking package dependencies (7s)
+    ## ✔  checking package namespace information
+    ##    checking package dependencies ...     checking package dependencies ...   ✔  checking package dependencies (7.8s)
     ##    checking if this is a source package ...  ✔  checking if this is a source package
     ## ✔  checking if there is a namespace
-    ##          checking for executable files ...     checking for executable files ...   ✔  checking for executable files (2.3s)
-    ##    checking for hidden files and directories ...  ✔  checking for hidden files and directories
+    ##          checking for executable files ...     checking for executable files ...   ✔  checking for executable files (2.2s)
+    ##    checking for hidden files and directories ...     checking for hidden files and directories ...   ✔  checking for hidden files and directories
     ##   ✔  checking for portable file names
     ##   ✔  checking serialization versions
-    ##    checking whether package 'styles.cmac' can be installed ...     checking whether package 'styles.cmac' can be installed ... [10s]     checking whether package 'styles.cmac' can be installed ... [10s]   ─  checking whether package 'styles.cmac' can be installed ... [10s] OK (10.2s)
-    ##    checking installed package size ...     checking installed package size ...   ✔  checking installed package size (876ms)
-    ##       ✔  checking package directory (362ms)
-    ##      checking for future file timestamps ...     checking for future file timestamps ...   ✔  checking for future file timestamps (584ms)
+    ##    checking whether package 'styles.cmac' can be installed ...     checking whether package 'styles.cmac' can be installed ... [10s]     checking whether package 'styles.cmac' can be installed ... [10s]   ─  checking whether package 'styles.cmac' can be installed ... [10s] OK (10s)
+    ##    checking installed package size ...     checking installed package size ...   ✔  checking installed package size (889ms)
+    ##       ✔  checking package directory (352ms)
+    ##      checking for future file timestamps ...     checking for future file timestamps ...   ✔  checking for future file timestamps (371ms)
     ##    checking 'build' directory ...  ✔  checking 'build' directory
     ##    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   ✔  checking DESCRIPTION meta-information (384ms)
-    ## N  checking top-level files
+    ##    checking top-level files ...  N  checking top-level files
     ##    Non-standard files/directories found at top level:
-    ##        'README.qmd' 'README_files' 'dev'
+    ##      'README.qmd' 'README_files' 'dev'
     ## ✔  checking for left-over files
-    ##    checking index information ...     checking index information ...   ✔  checking index information (339ms)
-    ##    checking package subdirectories ...     checking package subdirectories ...   ✔  checking package subdirectories (353ms)
+    ##    checking index information ...     checking index information ...   ✔  checking index information
+    ##    checking package subdirectories ...     checking package subdirectories ...   ✔  checking package subdirectories (343ms)
     ##    checking R files for non-ASCII characters ...     checking R files for non-ASCII characters ...   ✔  checking R files for non-ASCII characters
     ##    checking R files for syntax errors ...     checking R files for syntax errors ...   ✔  checking R files for syntax errors
-    ##    checking whether the package can be loaded ...     checking whether the package can be loaded ...   ✔  checking whether the package can be loaded (2.1s)
+    ##    checking whether the package can be loaded ...     checking whether the package can be loaded ...   ✔  checking whether the package can be loaded (2s)
     ##    checking whether the package can be loaded with stated dependencies ...     checking whether the package can be loaded with stated dependencies ...   ✔  checking whether the package can be loaded with stated dependencies (1.9s)
     ##    checking whether the package can be unloaded cleanly ...     checking whether the package can be unloaded cleanly ...   ✔  checking whether the package can be unloaded cleanly (2s)
-    ##    checking whether the namespace can be loaded with stated dependencies ...     checking whether the namespace can be loaded with stated dependencies ...   ✔  checking whether the namespace can be loaded with stated dependencies (1.9s)
-    ##    checking whether the namespace can be unloaded cleanly ...     checking whether the namespace can be unloaded cleanly ...   ✔  checking whether the namespace can be unloaded cleanly (2.2s)
+    ##    checking whether the namespace can be loaded with stated dependencies ...     checking whether the namespace can be loaded with stated dependencies ...   ✔  checking whether the namespace can be loaded with stated dependencies (1.8s)
+    ##    checking whether the namespace can be unloaded cleanly ...     checking whether the namespace can be unloaded cleanly ...   ✔  checking whether the namespace can be unloaded cleanly (2.1s)
     ##    checking loading without being on the library search path ...     checking loading without being on the library search path ...   ✔  checking loading without being on the library search path (2.5s)
-    ##    checking dependencies in R code ...     checking dependencies in R code ...   ✔  checking dependencies in R code (2s)
-    ##    checking S3 generic/method consistency ...     checking S3 generic/method consistency ...   ✔  checking S3 generic/method consistency (2.4s)
+    ##    checking dependencies in R code ...     checking dependencies in R code ...   ✔  checking dependencies in R code (1.9s)
+    ##    checking S3 generic/method consistency ...     checking S3 generic/method consistency ...   ✔  checking S3 generic/method consistency (2.3s)
     ##    checking replacement functions ...     checking replacement functions ...   ✔  checking replacement functions (1.9s)
     ##    checking foreign function calls ...     checking foreign function calls ...   ✔  checking foreign function calls (1.9s)
-    ##    checking R code for possible problems ...     checking R code for possible problems ... [11s]  ─  checking R code for possible problems ... [11s] NOTE (10.9s)
+    ##    checking R code for possible problems ...     checking R code for possible problems ... [11s]  ─  checking R code for possible problems ... [11s] NOTE (11.1s)
     ##    theme_cmac: no visible global function definition for 'alpha'
     ##    Undefined global functions or variables:
     ##      alpha
-    ##    checking Rd files ...     checking Rd files ...   ✔  checking Rd files (440ms)
+    ##    checking Rd files ...     checking Rd files ...   ✔  checking Rd files (435ms)
     ##    checking Rd metadata ...     checking Rd metadata ...   ✔  checking Rd metadata
     ##    checking Rd line widths ...     checking Rd line widths ...   ✔  checking Rd line widths
-    ##    checking Rd cross-references ...     checking Rd cross-references ...   ✔  checking Rd cross-references
-    ##    checking for missing documentation entries ...     checking for missing documentation entries ...   ✔  checking for missing documentation entries (1.9s)
-    ##    checking for code/documentation mismatches ...     checking for code/documentation mismatches ...   ✔  checking for code/documentation mismatches (5.6s)
+    ##    checking Rd cross-references ...     checking Rd cross-references ...   ✔  checking Rd cross-references (340ms)
+    ##    checking for missing documentation entries ...     checking for missing documentation entries ...   ✔  checking for missing documentation entries (1.8s)
+    ##    checking for code/documentation mismatches ...     checking for code/documentation mismatches ...   ✔  checking for code/documentation mismatches (5.5s)
     ##    checking Rd \usage sections ...     checking Rd \usage sections ...   ✔  checking Rd \usage sections (2.8s)
     ##    checking Rd contents ...     checking Rd contents ...   ✔  checking Rd contents
-    ##    checking for unstated dependencies in examples ...     checking for unstated dependencies in examples ...   ✔  checking for unstated dependencies in examples (351ms)
+    ##    checking for unstated dependencies in examples ...     checking for unstated dependencies in examples ...   ✔  checking for unstated dependencies in examples (348ms)
     ##          checking installed files from 'inst/doc' ...     checking installed files from 'inst/doc' ...   ✔  checking installed files from 'inst/doc'
-    ##    checking files in 'vignettes' ...     checking files in 'vignettes' ...   ✔  checking files in 'vignettes'
+    ##    checking files in 'vignettes' ...     checking files in 'vignettes' ...   N  checking files in 'vignettes'
+    ##    Files named as vignettes but with no recognized vignette engine:
+    ##       'vignettes/simulate-palette.Rmd'
+    ##    (Is a VignetteBuilder field missing?)
     ##      checking examples ...     checking examples ...   ✔  checking examples (5.9s)
-    ##          checking for unstated dependencies in vignettes ...     checking for unstated dependencies in vignettes ...   ✔  checking for unstated dependencies in vignettes (357ms)
-    ##    checking package vignettes in 'inst/doc' ...     checking package vignettes in 'inst/doc' ...   ✔  checking package vignettes in 'inst/doc'
+    ##          checking for unstated dependencies in vignettes ...     checking for unstated dependencies in vignettes ...   ✔  checking for unstated dependencies in vignettes (344ms)
+    ##    checking package vignettes in 'inst/doc' ...  ✔  checking package vignettes in 'inst/doc'
     ##          checking re-building of vignette outputs ...     checking re-building of vignette outputs ...   ✔  checking re-building of vignette outputs (9.1s)
-    ##    checking for non-standard things in the check directory ... OK  ✔  checking for non-standard things in the check directory
+    ##    checking for non-standard things in the check directory ...  ✔  checking for non-standard things in the check directory
     ## ✔  checking for detritus in the temp directory
     ##    
     ##    See
-    ##      'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpkzPwUl/styles.cmac.Rcheck/00check.log'
+    ##      'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpOWcWIM/styles.cmac.Rcheck/00check.log'
     ##    for details.
     ##    
     ##    
     ## 
 
     ## ── R CMD check results ────────────────────────────────── styles.cmac 0.1.0 ────
-    ## Duration: 1m 24s
+    ## Duration: 1m 23.9s
     ## 
     ## ❯ checking top-level files ... NOTE
     ##   Non-standard files/directories found at top level:
@@ -176,19 +176,24 @@ devtools::check()
     ##   Undefined global functions or variables:
     ##     alpha
     ## 
-    ## 0 errors ✔ | 0 warnings ✔ | 2 notes ✖
+    ## ❯ checking files in 'vignettes' ... NOTE
+    ##   Files named as vignettes but with no recognized vignette engine:
+    ##      'vignettes/simulate-palette.Rmd'
+    ##   (Is a VignetteBuilder field missing?)
+    ## 
+    ## 0 errors ✔ | 0 warnings ✔ | 3 notes ✖
 
 ``` r
 # Build the package
 devtools::build()
 ```
 
-    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (401ms)
-    ##       ─  preparing 'styles.cmac': (5.7s)
+    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (406ms)
+    ##       ─  preparing 'styles.cmac': (6.2s)
     ##    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##       ─  installing the package to build vignettes
-    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (15.8s)
-    ##       ─  checking for LF line-endings in source and make files and shell scripts (3s)
+    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (16s)
+    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.3s)
     ##   ─  checking for empty or unneeded directories
     ##      Omitted 'LazyData' from DESCRIPTION
     ##       ─  building 'styles.cmac_0.1.0.tar.gz'
@@ -202,18 +207,18 @@ devtools::build()
 devtools::install(build_vignettes = TRUE, upgrade = 'never')
 ```
 
-    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (399ms)
-    ##       ─  preparing 'styles.cmac': (5.7s)
+    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (394ms)
+    ##       ─  preparing 'styles.cmac': (5.9s)
     ##    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##       ─  installing the package to build vignettes
-    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (16.5s)
-    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.5s)
+    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (15.5s)
+    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.1s)
     ##   ─  checking for empty or unneeded directories
     ##      Omitted 'LazyData' from DESCRIPTION
     ##       ─  building 'styles.cmac_0.1.0.tar.gz'
     ##      
     ## Running "C:/PROGRA~1/R/R-42~1.3/bin/x64/Rcmd.exe" INSTALL \
-    ##   "C:\Users\DANIEL~1.CAR\AppData\Local\Temp\RtmpkzPwUl/styles.cmac_0.1.0.tar.gz" \
+    ##   "C:\Users\DANIEL~1.CAR\AppData\Local\Temp\RtmpOWcWIM/styles.cmac_0.1.0.tar.gz" \
     ##   --install-tests 
     ## * installing to library 'C:/Users/daniel.carpenter/AppData/Local/R/win-library/4.2'
     ## * installing *source* package 'styles.cmac' ...
