@@ -38,7 +38,7 @@ getPalette <- function(aesthetic, colors,
                        ) {
 
   # Intensity to darken text
-  DARKEN_AMOUNT = 0.35
+  DARKEN_AMOUNT = 0.4
 
   # If using brand palette
   if ( !(useColorBlindPalette) ) {
