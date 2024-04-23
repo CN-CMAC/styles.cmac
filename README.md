@@ -242,7 +242,7 @@ basePlot + scale_color_cmac(useColorBlindPalette = TRUE)
 # Change the palette (can use cols4all::c4a_palettes() to try others)
 # Also, can demo others in GUI using cols4all::c4a()
 basePlot + scale_color_cmac(useColorBlindPalette = TRUE, 
-                            colorBlindPaletteName = 'safe')
+                            colorBlindPaletteName = 'color_blind')
 ```
 
 ![](README_files/figure-commonmark/unnamed-chunk-12-2.png)
@@ -299,7 +299,7 @@ scale_cmac('fill', displayNames = TRUE)
          blue    orange       red     green    purple    yellow   purple1      gray 
     "#C0D0E4" "#FFD29A" "#FFB5B3" "#B9DDCF" "#CBC5EA" "#F2D4A0" "#DDC9CB" "#CCCED6" 
 
-#### Line colors
+#### Accent colors
 
 ``` r
 scale_cmac('color', displayNames = TRUE)

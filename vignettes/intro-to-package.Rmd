@@ -20,14 +20,13 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-The `styles.cmac` package provides a suite of functions for color styling in `ggplot2`, with an emphasis on branding for CMAC. Notably, it includes a palette that is adapted from the Tableau 10 Palette.  This package is designed to streamline the usage of color palettes, with inspiration drawn from the Tableau 10 Palette. 
+The `styles.cmac` package provides a suite of functions for color styling in `ggplot2`, with an emphasis on branding for CMAC. Notably, it includes a palette that is adapted from the Tableau 10 Palette. This package is designed to streamline the usage of color palettes, with inspiration drawn from the Tableau 10 Palette.
 
 For a deeper dive into the package's colorblind-friendly design, visit the fill palette and color (*line*) palette URLs provided below. This gives an overview of what the palette looks like as a whole.
 
--   See colorblind statistics for the [fill palette](https://davidmathlogic.com/colorblind/#%23BECDE0-%23FFD597-%23F6B7B4-%23BEE0D2-%23E4C6DC-%23BDDBE1-%23F7E5B3-%23DCDADA-%23FCC8DA-%23E5CFC5) and the [color (*line*) palette](https://davidmathlogic.com/colorblind/#%236388B4-%23E68900-%23EB4B43-%2354AC88-%23B07AA1-%233C9DAA-%23C5A952-%238A807E-%23D16D91-%23945430)
+-   See colorblind statistics for the [fill palette](https://davidmathlogic.com/colorblind/#%23C0D0E4-%23FFD29A-%23FFB5B3-%23B9DDCF-%23CBC5EA-%23F2D4A0-%23DDC9CB-%23CCCED6) and the [color (*line*) palette](https://davidmathlogic.com/colorblind/#%238797AB-%23D6A55C-%23C3726F-%2387AB9D-%238D87AB-%23C2A570-%23A38F91-%23828591)
 
 -   [*Reference*: Original Tableau 10 Palette](https://www.tableau.com/blog/colors-upgrade-tableau-10-56782)
-
 
 ## Installation
 
@@ -45,12 +44,11 @@ devtools::install_github("CN-CMAC/styles.cmac")
 
 ### Setup
 
-First, we load the `styles.cmac` package. 
+First, we load the `styles.cmac` package.
 
 ```{r}
 library(styles.cmac)
 ```
-
 
 ### Adjusting `color` Aesthetic
 
@@ -103,9 +101,8 @@ basePlot + scale_color_cmac(guide = 'none') + theme_cmac()
 basePlot + scale_color_cmac() + theme_cmac(legend.position = 'right')
 ```
 
+Additional parameter called `borderMode` controls the theme borders. [Inspiration for facets came from 1.2.2 in this book.](https://socviz.co/lookatdata.html)
 
-Additional parameter called `borderMode` controls the theme borders.
-[Inspiration for facets came from 1.2.2 in this book.](https://socviz.co/lookatdata.html)
 ```{r}
 # One other option is to remove the border when faceting
 # Note this example is only for demonstrating the borders. Faceting in
@@ -132,12 +129,12 @@ basePlot +
   theme_cmac()
 ```
 
-
 ### Adjusting `fill` Aesthetic
 
 Here are some examples of how you could use the fill colors in plots.
 
 Create a Base plot
+
 ```{r}
 # Create basic ggplot object
 ggplotObject <- ggplot(mtcars, aes(y = mpg, x = as.factor(cyl), 
@@ -147,7 +144,6 @@ ggplotObject <- ggplot(mtcars, aes(y = mpg, x = as.factor(cyl),
   # as much as possible
   geom_boxplot(size = 0.8)
 ```
-
 
 Here is the main combination that you might use.
 
@@ -178,6 +174,7 @@ ggplotObject2 + scale_fill_cmac(guide = 'none')
 > Use this setting for ***non-website*** reporting, i.e., PDF distribution.
 
 #### Non-Label Font Control
+
 ```{r}
 basePlot +
   
@@ -188,8 +185,8 @@ basePlot +
   theme_cmac(inTimesNewRoman = TRUE)
 ```
 
-
 #### Label Font Control
+
 ```{r}
 basePlot + 
   
@@ -235,7 +232,6 @@ basePlot + scale_color_cmac(colorOffset = 1)
 basePlot + scale_color_cmac(reverseOrder = TRUE)
 ```
 
-
 ### Override the palette with a color blind palette
 
 ```{r}
@@ -245,10 +241,11 @@ basePlot + scale_color_cmac(useColorBlindPalette = TRUE)
 # Change the palette (can use cols4all::c4a_palettes() to try others)
 # Also, can demo others in GUI using cols4all::c4a()
 basePlot + scale_color_cmac(useColorBlindPalette = TRUE, 
-                            colorBlindPaletteName = 'safe')
+                            colorBlindPaletteName = 'color_blind')
 ```
 
 ## Numeric Formats
+
 > Mainly for quick financial axis formatting
 
 ```{r}
@@ -259,10 +256,9 @@ basePlot + scale_color_cmac(useColorBlindPalette = TRUE,
 # kDollarsFormat(1000000,       scaleUnit = 'M', useDollarSign = FALSE)
 ```
 
-
 ## Colors Deep Dive
 
-This section take a closer look at the colors that are available to us in the `styles.cmac` package. 
+This section take a closer look at the colors that are available to us in the `styles.cmac` package.
 
 ### What Colors are Available?
 

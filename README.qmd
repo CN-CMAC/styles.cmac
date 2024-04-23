@@ -185,7 +185,7 @@ basePlot + scale_color_cmac(useColorBlindPalette = TRUE)
 # Change the palette (can use cols4all::c4a_palettes() to try others)
 # Also, can demo others in GUI using cols4all::c4a()
 basePlot + scale_color_cmac(useColorBlindPalette = TRUE, 
-                            colorBlindPaletteName = 'safe')
+                            colorBlindPaletteName = 'color_blind')
 ```
 
 ## Numeric Formats
@@ -214,7 +214,7 @@ kDollarsFormat(1000000,       scaleUnit = 'M', useDollarSign = FALSE)
 scale_cmac('fill', displayNames = TRUE)
 ```
 
-#### Line colors
+#### Accent colors
 
 ```{r}
 scale_cmac('color', displayNames = TRUE)
