@@ -18,8 +18,8 @@ editor: visual
 ## Overview
 
 > -   CMAC Brand in `ggplot2`
-> -   Package that streamlines color palette usage, adapated from the [Tableau 10 Palette](https://www.tableau.com/blog/colors-upgrade-tableau-10-56782)
-> -   See colorblind statistics for the [fill palette](https://davidmathlogic.com/colorblind/#%23BECDE0-%23FFD597-%23F6B7B4-%23BEE0D2-%23E4C6DC-%23BDDBE1-%23F7E5B3-%23DCDADA-%23FCC8DA-%23E5CFC5) and the [color (*line*) palette](https://davidmathlogic.com/colorblind/#%236388B4-%23E68900-%23EB4B43-%2354AC88-%23B07AA1-%233C9DAA-%23C5A952-%238A807E-%23D16D91-%23945430)
+> -   Package that streamlines color palette usage, initially adapted from the [Tableau 10 Palette](https://www.tableau.com/blog/colors-upgrade-tableau-10-56782)
+> -   See colorblind statistics for the [fill palette](https://davidmathlogic.com/colorblind/#%23C0D0E4-%23FFD29A-%23FFB5B3-%23B9DDCF-%23CBC5EA-%23F2D4A0-%23DDC9CB-%23CCCED6) and the [color (*line*) palette](https://davidmathlogic.com/colorblind/#%238797AB-%23D6A55C-%23C3726F-%2387AB9D-%238D87AB-%23C2A570-%23A38F91-%23828591)
 > -   ***PLEASE SEE THE PACKAGE [VIGNETTE]{.underline} FOR MORE DETAILED EXAMPLES***
 
 <br>
