@@ -1,7 +1,7 @@
 Check and Build Package
 ================
 Daniel Carpenter
-2024-04-23
+2024-04-24
 
 Do this every time you make a major change
 
@@ -74,20 +74,15 @@ devtools::check()
     ## • CXX14FLAGS: -Wall -pedantic
     ## • CXX17FLAGS: -Wall -pedantic
     ## • CXX20FLAGS: -Wall -pedantic
-    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (707ms)
-    ##       ─  preparing 'styles.cmac': (8.3s)
+    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (430ms)
+    ##       ─  preparing 'styles.cmac': (8.7s)
     ##    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##       ─  installing the package to build vignettes
-    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (30.1s)
-    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.9s)
+    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (30.6s)
+    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.8s)
     ##   ─  checking for empty or unneeded directories
     ##      Omitted 'LazyData' from DESCRIPTION
-    ##      NB: this package now depends on R (>=        NB: this package now depends on R (>= 3.5.0)
-    ##        WARNING: Added dependency on R >= 3.5.0 because serialized objects in
-    ##      serialize/load version 3 cannot be read in older versions of R.
-    ##      File(s) containing such objects:
-    ##        'styles.cmac/vignettes/.RData'
-    ##   ─  building 'styles.cmac_0.1.0.tar.gz'
+    ##       ─  building 'styles.cmac_0.1.0.tar.gz'
     ##      
     ## ══ Checking ════════════════════════════════════════════════════════════════════
     ## Setting env vars:
@@ -96,90 +91,81 @@ devtools::check()
     ## • _R_CHECK_FORCE_SUGGESTS_      : FALSE
     ## • NOT_CRAN                      : true
     ## ── R CMD check ─────────────────────────────────────────────────────────────────
-    ##       ─  using log directory 'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpotGQtD/styles.cmac.Rcheck' (456ms)
+    ##       ─  using log directory 'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpofqIg0/styles.cmac.Rcheck' (462ms)
     ## ─  using R version 4.2.3 (2023-03-15 ucrt)
     ## ─  using platform: x86_64-w64-mingw32 (64-bit)
     ## ─  using session charset: UTF-8
-    ##       ─  using options '--no-manual --as-cran' (618ms)
+    ##       ─  using options '--no-manual --as-cran' (599ms)
     ##   ✔  checking for file 'styles.cmac/DESCRIPTION'
     ## ─  checking extension type ... Package
     ## ─  this is package 'styles.cmac' version '0.1.0'
     ## ─  package encoding: UTF-8
     ## ✔  checking package namespace information
-    ##    checking package dependencies ...     checking package dependencies ...   ✔  checking package dependencies (10.4s)
+    ##    checking package dependencies ...     checking package dependencies ...   ✔  checking package dependencies (10.3s)
     ##    checking if this is a source package ...  ✔  checking if this is a source package
     ## ✔  checking if there is a namespace
-    ##          checking for executable files ...     checking for executable files ...   ✔  checking for executable files (3s)
-    ##    checking for hidden files and directories ...  N  checking for hidden files and directories
-    ##      Found the following hidden files and directories:
-    ##      vignettes/.RData
-    ##      These were most likely included in error. See section 'Package
-    ##    structure' in the 'Writing R Extensions' manual.
-    ##      checking for portable file names ...     checking for portable file names ...   ✔  checking for portable file names
-    ##      checking whether package 'styles.cmac' can be installed ...     checking whether package 'styles.cmac' can be installed ... [14s]     checking whether package 'styles.cmac' can be installed ... [14s]   ─  checking whether package 'styles.cmac' can be installed ... [14s] OK (13.9s)
+    ##          checking for executable files ...     checking for executable files ...   ✔  checking for executable files (2.9s)
+    ##    checking for hidden files and directories ...  ✔  checking for hidden files and directories
+    ##    checking for portable file names ...  ✔  checking for portable file names
+    ##   ✔  checking serialization versions
+    ##    checking whether package 'styles.cmac' can be installed ...     checking whether package 'styles.cmac' can be installed ... [14s]     checking whether package 'styles.cmac' can be installed ... [14s]   ─  checking whether package 'styles.cmac' can be installed ... [14s] OK (14.2s)
     ##    checking installed package size ...     checking installed package size ...   ✔  checking installed package size (1.1s)
-    ##       ✔  checking package directory (576ms)
-    ##      checking for future file timestamps ...     checking for future file timestamps ...   ✔  checking for future file timestamps (455ms)
+    ##       ✔  checking package directory (565ms)
+    ##      checking for future file timestamps ...     checking for future file timestamps ...   ✔  checking for future file timestamps (688ms)
     ##    checking 'build' directory ...  ✔  checking 'build' directory
-    ##    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   ✔  checking DESCRIPTION meta-information (372ms)
+    ##    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   ✔  checking DESCRIPTION meta-information (578ms)
     ## N  checking top-level files
     ##      Non-standard files/directories found at top level:
     ##      'README.qmd' 'README_files' 'dev'
     ## ✔  checking for left-over files
-    ##    checking index information ...     checking index information ...   ✔  checking index information (341ms)
-    ##    checking package subdirectories ...     checking package subdirectories ...   ✔  checking package subdirectories (355ms)
+    ##    checking index information ...     checking index information ...   ✔  checking index information (342ms)
+    ##    checking package subdirectories ...     checking package subdirectories ...   ✔  checking package subdirectories (365ms)
     ##    checking R files for non-ASCII characters ...     checking R files for non-ASCII characters ...   ✔  checking R files for non-ASCII characters
     ##    checking R files for syntax errors ...     checking R files for syntax errors ...   ✔  checking R files for syntax errors
-    ##    checking whether the package can be loaded ...     checking whether the package can be loaded ...   ✔  checking whether the package can be loaded (2.4s)
-    ##    checking whether the package can be loaded with stated dependencies ...     checking whether the package can be loaded with stated dependencies ...   ✔  checking whether the package can be loaded with stated dependencies (2.2s)
-    ##    checking whether the package can be unloaded cleanly ...     checking whether the package can be unloaded cleanly ...   ✔  checking whether the package can be unloaded cleanly (2.4s)
-    ##    checking whether the namespace can be loaded with stated dependencies ...     checking whether the namespace can be loaded with stated dependencies ...   ✔  checking whether the namespace can be loaded with stated dependencies (2.3s)
-    ##    checking whether the namespace can be unloaded cleanly ...     checking whether the namespace can be unloaded cleanly ...   ✔  checking whether the namespace can be unloaded cleanly (2.4s)
-    ##    checking loading without being on the library search path ...     checking loading without being on the library search path ...   ✔  checking loading without being on the library search path (3.2s)
-    ##    checking dependencies in R code ...     checking dependencies in R code ...   N  checking dependencies in R code (2.1s)
+    ##    checking whether the package can be loaded ...     checking whether the package can be loaded ...   ✔  checking whether the package can be loaded (2s)
+    ##    checking whether the package can be loaded with stated dependencies ...     checking whether the package can be loaded with stated dependencies ...   ✔  checking whether the package can be loaded with stated dependencies (2s)
+    ##    checking whether the package can be unloaded cleanly ...     checking whether the package can be unloaded cleanly ...   ✔  checking whether the package can be unloaded cleanly (2s)
+    ##    checking whether the namespace can be loaded with stated dependencies ...     checking whether the namespace can be loaded with stated dependencies ...   ✔  checking whether the namespace can be loaded with stated dependencies (1.9s)
+    ##    checking whether the namespace can be unloaded cleanly ...     checking whether the namespace can be unloaded cleanly ...   ✔  checking whether the namespace can be unloaded cleanly (2.1s)
+    ##    checking loading without being on the library search path ...     checking loading without being on the library search path ...   ✔  checking loading without being on the library search path (3.1s)
+    ##    checking dependencies in R code ...     checking dependencies in R code ...   N  checking dependencies in R code (2s)
     ##    Namespaces in Imports field not imported from:
     ##      'cowplot' 'tidyverse'
     ##      All declared Imports should be used.
-    ##    checking S3 generic/method consistency ...     checking S3 generic/method consistency ...   ✔  checking S3 generic/method consistency (2.5s)
-    ##    checking replacement functions ...     checking replacement functions ...   ✔  checking replacement functions (2s)
-    ##    checking foreign function calls ...     checking foreign function calls ...   ✔  checking foreign function calls (2.2s)
-    ##    checking R code for possible problems ...     checking R code for possible problems ... [13s]  ─  checking R code for possible problems ... [13s] NOTE (12.7s)
+    ##    checking S3 generic/method consistency ...     checking S3 generic/method consistency ...   ✔  checking S3 generic/method consistency (2.4s)
+    ##    checking replacement functions ...     checking replacement functions ...   ✔  checking replacement functions (1.9s)
+    ##    checking foreign function calls ...     checking foreign function calls ...   ✔  checking foreign function calls (1.9s)
+    ##    checking R code for possible problems ...     checking R code for possible problems ... [11s]  ─  checking R code for possible problems ... [11s] NOTE (11s)
     ##    theme_cmac: no visible global function definition for 'alpha'
     ##    Undefined global functions or variables:
     ##      alpha
-    ##    checking Rd files ...     checking Rd files ...   ✔  checking Rd files (439ms)
+    ##    checking Rd files ...     checking Rd files ...   ✔  checking Rd files (548ms)
     ##    checking Rd metadata ...     checking Rd metadata ...   ✔  checking Rd metadata
     ##    checking Rd line widths ...     checking Rd line widths ...   ✔  checking Rd line widths
-    ##    checking Rd cross-references ...     checking Rd cross-references ...   ✔  checking Rd cross-references (454ms)
+    ##    checking Rd cross-references ...     checking Rd cross-references ...   ✔  checking Rd cross-references (449ms)
     ##    checking for missing documentation entries ...     checking for missing documentation entries ...   ✔  checking for missing documentation entries (2s)
-    ##    checking for code/documentation mismatches ...     checking for code/documentation mismatches ...   ✔  checking for code/documentation mismatches (5.7s)
+    ##    checking for code/documentation mismatches ...     checking for code/documentation mismatches ...   ✔  checking for code/documentation mismatches (5.6s)
     ##    checking Rd \usage sections ...     checking Rd \usage sections ...   ✔  checking Rd \usage sections (2.9s)
     ##    checking Rd contents ...     checking Rd contents ...   ✔  checking Rd contents
-    ##    checking for unstated dependencies in examples ...     checking for unstated dependencies in examples ...   ✔  checking for unstated dependencies in examples (343ms)
+    ##    checking for unstated dependencies in examples ...     checking for unstated dependencies in examples ...   ✔  checking for unstated dependencies in examples (342ms)
     ##          checking installed files from 'inst/doc' ...     checking installed files from 'inst/doc' ...   ✔  checking installed files from 'inst/doc'
     ##    checking files in 'vignettes' ...     checking files in 'vignettes' ...   ✔  checking files in 'vignettes'
-    ##    checking examples ...     checking examples ...   ✔  checking examples (6.5s)
-    ##          checking for unstated dependencies in vignettes ...     checking for unstated dependencies in vignettes ...   ✔  checking for unstated dependencies in vignettes (367ms)
+    ##      checking examples ...     checking examples ...   ✔  checking examples (6.5s)
+    ##          checking for unstated dependencies in vignettes ...     checking for unstated dependencies in vignettes ...   ✔  checking for unstated dependencies in vignettes (373ms)
     ##    checking package vignettes in 'inst/doc' ...     checking package vignettes in 'inst/doc' ...   ✔  checking package vignettes in 'inst/doc'
-    ##          checking re-building of vignette outputs ...     checking re-building of vignette outputs ... [28s]     checking re-building of vignette outputs ... [28s]   ─  checking re-building of vignette outputs ... [28s] OK (28.7s)
+    ##          checking re-building of vignette outputs ...     checking re-building of vignette outputs ... [26s]     checking re-building of vignette outputs ... [26s]   ─  checking re-building of vignette outputs ... [26s] OK (26.1s)
     ##    checking for non-standard things in the check directory ...  ✔  checking for non-standard things in the check directory
     ## ✔  checking for detritus in the temp directory
     ##    
     ##    See
-    ##      'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpotGQtD/styles.cmac.Rcheck/00check.log'
+    ##      'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpofqIg0/styles.cmac.Rcheck/00check.log'
     ##    for details.
     ##    
     ##    
     ## 
 
     ## ── R CMD check results ────────────────────────────────── styles.cmac 0.1.0 ────
-    ## Duration: 2m 0.5s
-    ## 
-    ## ❯ checking for hidden files and directories ... NOTE
-    ##   Found the following hidden files and directories:
-    ##     vignettes/.RData
-    ##   These were most likely included in error. See section 'Package
-    ##   structure' in the 'Writing R Extensions' manual.
+    ## Duration: 1m 53.3s
     ## 
     ## ❯ checking top-level files ... NOTE
     ##   Non-standard files/directories found at top level:
@@ -190,31 +176,26 @@ devtools::check()
     ##     'cowplot' 'tidyverse'
     ##     All declared Imports should be used.
     ## 
-    ## ❯ checking R code for possible problems ... [13s] NOTE
+    ## ❯ checking R code for possible problems ... [11s] NOTE
     ##   theme_cmac: no visible global function definition for 'alpha'
     ##   Undefined global functions or variables:
     ##     alpha
     ## 
-    ## 0 errors ✔ | 0 warnings ✔ | 4 notes ✖
+    ## 0 errors ✔ | 0 warnings ✔ | 3 notes ✖
 
 ``` r
 # Build the package
 devtools::build()
 ```
 
-    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (701ms)
-    ##       ─  preparing 'styles.cmac': (8.9s)
+    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (412ms)
+    ##       ─  preparing 'styles.cmac': (6.7s)
     ##    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##       ─  installing the package to build vignettes
-    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (33s)
-    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.8s)
+    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (29.4s)
+    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.7s)
     ##   ─  checking for empty or unneeded directories
     ##      Omitted 'LazyData' from DESCRIPTION
-    ##      NB: this package now depends on R (>=        NB: this package now depends on R (>= 3.5.0)
-    ##        WARNING: Added dependency on R >= 3.5.0 because serialized objects in
-    ##      serialize/load version 3 cannot be read in older versions of R.
-    ##      File(s) containing such objects:
-    ##        'styles.cmac/vignettes/.RData'
     ##       ─  building 'styles.cmac_0.1.0.tar.gz'
     ##      
     ## 
@@ -226,23 +207,18 @@ devtools::build()
 devtools::install(build_vignettes = TRUE, upgrade = 'never')
 ```
 
-    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (513ms)
-    ##       ─  preparing 'styles.cmac': (8.1s)
+    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (412ms)
+    ##       ─  preparing 'styles.cmac': (6.7s)
     ##    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##       ─  installing the package to build vignettes
-    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (32.1s)
-    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.8s)
+    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (29.8s)
+    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.7s)
     ##   ─  checking for empty or unneeded directories
     ##      Omitted 'LazyData' from DESCRIPTION
-    ##      NB: this package now depends on R (>=        NB: this package now depends on R (>= 3.5.0)
-    ##        WARNING: Added dependency on R >= 3.5.0 because serialized objects in
-    ##      serialize/load version 3 cannot be read in older versions of R.
-    ##      File(s) containing such objects:
-    ##        'styles.cmac/vignettes/.RData'
-    ##   ─  building 'styles.cmac_0.1.0.tar.gz'
+    ##       ─  building 'styles.cmac_0.1.0.tar.gz'
     ##      
     ## Running "C:/PROGRA~1/R/R-42~1.3/bin/x64/Rcmd.exe" INSTALL \
-    ##   "C:\Users\DANIEL~1.CAR\AppData\Local\Temp\RtmpotGQtD/styles.cmac_0.1.0.tar.gz" \
+    ##   "C:\Users\DANIEL~1.CAR\AppData\Local\Temp\RtmpofqIg0/styles.cmac_0.1.0.tar.gz" \
     ##   --install-tests 
     ## * installing to library 'C:/Users/daniel.carpenter/AppData/Local/R/win-library/4.2'
     ## * installing *source* package 'styles.cmac' ...

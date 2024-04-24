@@ -296,8 +296,8 @@ kDollarsFormat(1000000,       scaleUnit = 'M', useDollarSign = FALSE)
 scale_cmac('fill', displayNames = TRUE)
 ```
 
-         blue    orange       red     green    purple    yellow   purple1      gray 
-    "#C0D0E4" "#FFD29A" "#FFB5B3" "#B9DDCF" "#CBC5EA" "#F2D4A0" "#DDC9CB" "#CCCED6" 
+         blue    orange       red     green    purple    yellow      gray   purple1 
+    "#C0D0E4" "#FFD29A" "#FFB5B3" "#B9DDCF" "#CBC5EA" "#F2D4A0" "#C3C6D2" "#E6D7D7" 
 
 #### Accent colors
 
@@ -305,8 +305,8 @@ scale_cmac('fill', displayNames = TRUE)
 scale_cmac('color', displayNames = TRUE)
 ```
 
-         blue    orange       red     green    purple    yellow   purple1      gray 
-    "#8797ab" "#d6a55c" "#c3726f" "#87ab9d" "#8d87ab" "#c2a570" "#a38f91" "#828591" 
+         blue    orange       red     green    purple    yellow      gray   purple1 
+    "#8797ab" "#d6a55c" "#c3726f" "#87ab9d" "#8d87ab" "#c2a570" "#828591" "#baabab" 
 
 #### Blue and Gray colors, like the background of slide decks
 
@@ -386,7 +386,7 @@ scale_cmac('color', 3)
 scale_cmac('color')[6:8]
 ```
 
-    [1] "#c2a570" "#a38f91" "#828591"
+    [1] "#c2a570" "#828591" "#baabab"
 
 ``` r
 # Or access specific colors all at once
