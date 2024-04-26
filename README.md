@@ -17,8 +17,13 @@ Daniel Carpenter
       Color](#use-only-1-color)
     - [<span class="toc-section-number">1.4.4</span> How to use Times
       New Roman](#how-to-use-times-new-roman)
-    - [<span class="toc-section-number">1.4.5</span> Offset or Reverse
+    - [<span class="toc-section-number">1.4.5</span> Darken Text when
+      Over Filled Elements](#darken-text-when-over-filled-elements)
+    - [<span class="toc-section-number">1.4.6</span> Offset or Reverse
       Order of Colors](#offset-or-reverse-order-of-colors)
+    - [<span class="toc-section-number">1.4.7</span> Override the
+      palette with a color blind
+      palette](#override-the-palette-with-a-color-blind-palette)
   - [<span class="toc-section-number">1.5</span> Numeric
     Formats](#numeric-formats)
   - [<span class="toc-section-number">1.6</span> Colors Deep
@@ -38,13 +43,13 @@ Daniel Carpenter
 ## Overview
 
 > - CMAC Brand in `ggplot2`
-> - Package that streamlines color palette usage, adapated from the
->   [Tableau 10
+> - Package that streamlines color palette usage, initially adapted from
+>   the [Tableau 10
 >   Palette](https://www.tableau.com/blog/colors-upgrade-tableau-10-56782)
 > - See colorblind statistics for the [fill
->   palette](https://davidmathlogic.com/colorblind/#%23BECDE0-%23FFD597-%23F6B7B4-%23BEE0D2-%23E4C6DC-%23BDDBE1-%23F7E5B3-%23DCDADA-%23FCC8DA-%23E5CFC5)
+>   palette](https://davidmathlogic.com/colorblind/#%23B4D0F4-%23FFD39F-%23FFB5B3-%23B4DFCE-%23CDC9E0-%23F2D4A0-%23C3C6D2-%23E6D7D7)
 >   and the [color (*line*)
->   palette](https://davidmathlogic.com/colorblind/#%236388B4-%23E68900-%23EB4B43-%2354AC88-%23B07AA1-%233C9DAA-%23C5A952-%238A807E-%23D16D91-%23945430)
+>   palette](https://davidmathlogic.com/colorblind/#%237996B9-%23DBA657-%23C86D6A-%2383AF9E-%23928EA4-%23C2A570-%23828591-%23BAABAB)
 > - ***PLEASE SEE THE PACKAGE <u>VIGNETTE</u> FOR MORE DETAILED
 >   EXAMPLES***
 
@@ -187,21 +192,60 @@ basePlot +
 
 ![](README_files/figure-commonmark/unnamed-chunk-9-1.png)
 
+### Darken Text when Over Filled Elements
+
+``` r
+ggplot(mtcars, aes(y = mpg, x = wt, color = as.factor(cyl))) +
+  geom_point(aes(fill = as.factor(cyl)),
+             size = 10,
+             pch = 21,
+             color = 'transparent',
+             alpha = 0.9
+  ) +
+  geom_text(aes(label = round(mpg, 0))) +
+  scale_fill_cmac() +
+
+  # KEY - darken the text so that it is easier to view
+  # Over fill
+  scale_color_cmac(darkenPaletteForTextGeoms = TRUE) +
+  theme_cmac()
+```
+
+![](README_files/figure-commonmark/unnamed-chunk-10-1.png)
+
 ### Offset or Reverse Order of Colors
 
 ``` r
 # Offset the colors by 1
-basePlot + scale_color_cmac(colorOffset = 1)
+basePlot + scale_color_cmac(colorOffset = 5)
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-10-1.png)
+![](README_files/figure-commonmark/unnamed-chunk-11-1.png)
 
 ``` r
 # reverse the order of the palette
 basePlot + scale_color_cmac(reverseOrder = TRUE)
 ```
 
-![](README_files/figure-commonmark/unnamed-chunk-10-2.png)
+![](README_files/figure-commonmark/unnamed-chunk-11-2.png)
+
+### Override the palette with a color blind palette
+
+``` r
+# Use color blind friendly palette (works with fill too)
+basePlot + scale_color_cmac(useColorBlindPalette = TRUE)
+```
+
+![](README_files/figure-commonmark/unnamed-chunk-12-1.png)
+
+``` r
+# Change the palette (can use cols4all::c4a_palettes() to try others)
+# Also, can demo others in GUI using cols4all::c4a()
+basePlot + scale_color_cmac(useColorBlindPalette = TRUE, 
+                            colorBlindPaletteName = 'color_blind')
+```
+
+![](README_files/figure-commonmark/unnamed-chunk-12-2.png)
 
 ## Numeric Formats
 
@@ -217,7 +261,13 @@ kDollarsFormat(1000,          scaleUnit = 'K')
 kDollarsFormat(1000000,       scaleUnit = 'M')
 ```
 
-    [1] "$1 M"
+    [1] "$1 MM"
+
+``` r
+kDollarsFormat(1000000,       scaleUnit = 'MM')
+```
+
+    [1] "$1 MM"
 
 ``` r
 kDollarsFormat(1000000000,    scaleUnit = 'B')
@@ -235,7 +285,7 @@ kDollarsFormat(1500000000000, scaleUnit = 'T')
 kDollarsFormat(1000000,       scaleUnit = 'M', useDollarSign = FALSE)
 ```
 
-    [1] "1 M"
+    [1] "1 MM"
 
 ## Colors Deep Dive
 
@@ -252,21 +302,17 @@ kDollarsFormat(1000000,       scaleUnit = 'M', useDollarSign = FALSE)
 scale_cmac('fill', displayNames = TRUE)
 ```
 
-         blue    orange       red     green    purple     blue1    yellow      gray 
-    "#BECDE0" "#FFD597" "#F6B7B4" "#BEE0D2" "#E4C6DC" "#BDDBE1" "#F7E5B3" "#DCDADA" 
-         pink       tan 
-    "#FCC8DA" "#E5CFC5" 
+         blue    orange       red     green    purple    yellow      gray   purple1 
+    "#B4D0F4" "#FFD39F" "#FFB5B3" "#B4DFCE" "#CDC9E0" "#F2D4A0" "#C3C6D2" "#E6D7D7" 
 
-#### Line colors
+#### Accent colors
 
 ``` r
 scale_cmac('color', displayNames = TRUE)
 ```
 
-         blue    orange       red     green    purple     blue1    yellow      gray 
-    "#6388B4" "#E68900" "#EB4B43" "#54AC88" "#B07AA1" "#3C9DAA" "#C5A952" "#8A807E" 
-         pink       tan 
-    "#D16D91" "#945430" 
+         blue    orange       red     green    purple    yellow      gray   purple1 
+    "#7996b9" "#dba657" "#c86d6a" "#83af9e" "#928ea4" "#c2a570" "#828591" "#baabab" 
 
 #### Blue and Gray colors, like the background of slide decks
 
@@ -316,7 +362,7 @@ scale_cmac('gray') # Blues that are in the brand
 scale_cmac('fill', 'red')
 ```
 
-    [1] "#F6B7B4"
+    [1] "#FFB5B3"
 
 ``` r
 # Single color from the base palette
@@ -339,18 +385,18 @@ scale_cmac('blue', 'blue2')
 scale_cmac('color', 3)
 ```
 
-    [1] "#6388B4" "#E68900" "#EB4B43"
+    [1] "#7996b9" "#dba657" "#c86d6a"
 
 ``` r
 # Get the last 3 colors in the fill palette
 scale_cmac('color')[6:8]
 ```
 
-    [1] "#3C9DAA" "#C5A952" "#8A807E"
+    [1] "#c2a570" "#828591" "#baabab"
 
 ``` r
 # Or access specific colors all at once
 scale_cmac('color', 'blue', 'orange', 'green', 'yellow')
 ```
 
-    [1] "#6388B4" "#E68900" "#54AC88" "#C5A952"
+    [1] "#7996b9" "#dba657" "#83af9e" "#c2a570"

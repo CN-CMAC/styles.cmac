@@ -3,14 +3,14 @@
 \name{kDollarsFormat}
 \alias{kDollarsFormat}
 \title{Converts value to scaled format.
-For example, 10^6 returns "$1 M" in millions format.}
+For example, 10^6 returns "$1 MM" in millions format.}
 \usage{
-kDollarsFormat(x, scaleUnit = "M", useDollarSign = TRUE, roundToDigit = 1)
+kDollarsFormat(x, scaleUnit = "MM", useDollarSign = TRUE, roundToDigit = 1)
 }
 \arguments{
 \item{x}{A numeric value or vector.}
 
-\item{scaleUnit}{the desired scaling to calculate. Thousands = 'K', Millions = 'M', Billions = 'B', Trillions = 'T'.}
+\item{scaleUnit}{Default 'MM', the desired scaling to calculate. Thousands = 'K', Millions = 'M' (or 'MM'), Billions = 'B', Trillions = 'T'.}
 
 \item{useDollarSign}{Default TRUE if you want to add a dollar sign to the suffix. False to omit '$'.}
 
@@ -21,11 +21,12 @@ Formatted number
 }
 \description{
 Converts value to scaled format.
-For example, 10^6 returns "$1 M" in millions format.
+For example, 10^6 returns "$1 MM" in millions format.
 }
 \examples{
 kDollarsFormat(1000, scaleUnit = 'K')
 kDollarsFormat(1000000, scaleUnit = 'M')
+kDollarsFormat(1000000, scaleUnit = 'MM')
 kDollarsFormat(1000000000, scaleUnit = 'B')
 kDollarsFormat(1500000000000, scaleUnit = 'T')
 kDollarsFormat(1000000, scaleUnit = 'M', useDollarSign = FALSE)

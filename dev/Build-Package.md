@@ -1,7 +1,7 @@
 Check and Build Package
 ================
 Daniel Carpenter
-2024-03-05
+2024-04-26
 
 Do this every time you make a major change
 
@@ -27,7 +27,6 @@ document()
 
     ## ℹ Updating styles.cmac documentation
     ## ℹ Loading styles.cmac
-    ## Writing 'getTimesNewRomanFamily.Rd'
 
 ``` r
 quarto::quarto_render('README.qmd')
@@ -36,7 +35,7 @@ quarto::quarto_render('README.qmd')
     ## 
     ## 
     ## processing file: README.qmd
-    ##   |                                                           |                                                   |   0%  |                                                           |.                                                  |   3%                     |                                                           |...                                                |   6% (unnamed-chunk-1)   |                                                           |....                                               |   9%                     |                                                           |......                                             |  11% (unnamed-chunk-2)   |                                                           |.......                                            |  14%                     |                                                           |.........                                          |  17% (unnamed-chunk-3)   |                                                           |..........                                         |  20%                     |                                                           |............                                       |  23% (unnamed-chunk-4)   |                                                           |.............                                      |  26%                     |                                                           |...............                                    |  29% (unnamed-chunk-5)   |                                                           |................                                   |  31%                     |                                                           |.................                                  |  34% (unnamed-chunk-6)   |                                                           |...................                                |  37%                     |                                                           |....................                               |  40% (unnamed-chunk-7)   |                                                           |......................                             |  43%                     |                                                           |.......................                            |  46% (unnamed-chunk-8)   |                                                           |.........................                          |  49%                     |                                                           |..........................                         |  51% (unnamed-chunk-9)   |                                                           |............................                       |  54%                     |                                                           |.............................                      |  57% (unnamed-chunk-10)  |                                                           |...............................                    |  60%                     |                                                           |................................                   |  63% (unnamed-chunk-11)  |                                                           |..................................                 |  66%                     |                                                           |...................................                |  69% (unnamed-chunk-12)  |                                                           |....................................               |  71%                     |                                                           |......................................             |  74% (unnamed-chunk-13)  |                                                           |.......................................            |  77%                     |                                                           |.........................................          |  80% (unnamed-chunk-14)  |                                                           |..........................................         |  83%                     |                                                           |............................................       |  86% (unnamed-chunk-15)  |                                                           |.............................................      |  89%                     |                                                           |...............................................    |  91% (unnamed-chunk-16)  |                                                           |................................................   |  94%                     |                                                           |.................................................. |  97% (unnamed-chunk-17)  |                                                           |...................................................| 100%                                                                                                                                
+    ##   |                                                           |                                                   |   0%  |                                                           |.                                                  |   3%                     |                                                           |...                                                |   5% (unnamed-chunk-1)   |                                                           |....                                               |   8%                     |                                                           |.....                                              |  10% (unnamed-chunk-2)   |                                                           |.......                                            |  13%                     |                                                           |........                                           |  15% (unnamed-chunk-3)   |                                                           |.........                                          |  18%                     |                                                           |..........                                         |  21% (unnamed-chunk-4)   |                                                           |............                                       |  23%                     |                                                           |.............                                      |  26% (unnamed-chunk-5)   |                                                           |..............                                     |  28%                     |                                                           |................                                   |  31% (unnamed-chunk-6)   |                                                           |.................                                  |  33%                     |                                                           |..................                                 |  36% (unnamed-chunk-7)   |                                                           |....................                               |  38%                     |                                                           |.....................                              |  41% (unnamed-chunk-8)   |                                                           |......................                             |  44%                     |                                                           |........................                           |  46% (unnamed-chunk-9)   |                                                           |.........................                          |  49%                     |                                                           |..........................                         |  51% (unnamed-chunk-10)  |                                                           |...........................                        |  54%                     |                                                           |.............................                      |  56% (unnamed-chunk-11)  |                                                           |..............................                     |  59%                     |                                                           |...............................                    |  62% (unnamed-chunk-12)  |                                                           |.................................                  |  64%                     |                                                           |..................................                 |  67% (unnamed-chunk-13)  |                                                           |...................................                |  69%                     |                                                           |.....................................              |  72% (unnamed-chunk-14)  |                                                           |......................................             |  74%                     |                                                           |.......................................            |  77% (unnamed-chunk-15)  |                                                           |.........................................          |  79%                     |                                                           |..........................................         |  82% (unnamed-chunk-16)  |                                                           |...........................................        |  85%                     |                                                           |............................................       |  87% (unnamed-chunk-17)  |                                                           |..............................................     |  90%                     |                                                           |...............................................    |  92% (unnamed-chunk-18)  |                                                           |................................................   |  95%                     |                                                           |.................................................. |  97% (unnamed-chunk-19)  |                                                           |...................................................| 100%                                                                                                                                
     ## output file: README.knit.md
     ## 
     ## pandoc 
@@ -75,15 +74,13 @@ devtools::check()
     ## • CXX14FLAGS: -Wall -pedantic
     ## • CXX17FLAGS: -Wall -pedantic
     ## • CXX20FLAGS: -Wall -pedantic
-    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (463ms)
-    ##       ─  preparing 'styles.cmac': (4.9s)
+    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (427ms)
+    ##       ─  preparing 'styles.cmac': (7.2s)
     ##    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##       ─  installing the package to build vignettes
-    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (11.7s)
-    ##       ─  checking for LF line-endings in source and make files and shell scripts (2.3s)
+    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (30s)
+    ##       ─  checking for LF line-endings in source and make files and shell scripts (4s)
     ##   ─  checking for empty or unneeded directories
-    ##      Removed empty directory 'styles.cmac/tests/testthat'
-    ##    Removed empty directory 'styles.cmac/tests'
     ##      Omitted 'LazyData' from DESCRIPTION
     ##       ─  building 'styles.cmac_0.1.0.tar.gz'
     ##      
@@ -94,105 +91,111 @@ devtools::check()
     ## • _R_CHECK_FORCE_SUGGESTS_      : FALSE
     ## • NOT_CRAN                      : true
     ## ── R CMD check ─────────────────────────────────────────────────────────────────
-    ##       ─  using log directory 'C:/Users/daniel.carpenter/AppData/Local/Temp/Rtmp4kOUwx/styles.cmac.Rcheck' (443ms)
+    ##       ─  using log directory 'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpkFsOjO/styles.cmac.Rcheck' (442ms)
     ## ─  using R version 4.2.3 (2023-03-15 ucrt)
     ## ─  using platform: x86_64-w64-mingw32 (64-bit)
     ## ─  using session charset: UTF-8
-    ##       ─  using options '--no-manual --as-cran' (358ms)
+    ##       ─  using options '--no-manual --as-cran' (602ms)
     ##   ✔  checking for file 'styles.cmac/DESCRIPTION'
     ## ─  checking extension type ... Package
     ## ─  this is package 'styles.cmac' version '0.1.0'
     ## ─  package encoding: UTF-8
     ## ✔  checking package namespace information
-    ##    checking package dependencies ...     checking package dependencies ...   ✔  checking package dependencies (8.3s)
+    ##    checking package dependencies ...     checking package dependencies ...   ✔  checking package dependencies (7.9s)
     ##    checking if this is a source package ...  ✔  checking if this is a source package
     ## ✔  checking if there is a namespace
-    ##          checking for executable files ...     checking for executable files ...   ✔  checking for executable files (2.2s)
+    ##          checking for executable files ...     checking for executable files ...   ✔  checking for executable files (2.5s)
     ##    checking for hidden files and directories ...  ✔  checking for hidden files and directories
-    ##    checking for portable file names ...  ✔  checking for portable file names
-    ## ✔  checking serialization versions
-    ##    checking whether package 'styles.cmac' can be installed ...     checking whether package 'styles.cmac' can be installed ...   ✔  checking whether package 'styles.cmac' can be installed (7.3s)
-    ##    checking installed package size ...     checking installed package size ...   ✔  checking installed package size (905ms)
-    ##       ✔  checking package directory (354ms)
-    ##      checking for future file timestamps ...     checking for future file timestamps ...   ✔  checking for future file timestamps (398ms)
+    ##   ✔  checking for portable file names
+    ##   ✔  checking serialization versions
+    ##    checking whether package 'styles.cmac' can be installed ...     checking whether package 'styles.cmac' can be installed ... [14s]     checking whether package 'styles.cmac' can be installed ... [14s]   ─  checking whether package 'styles.cmac' can be installed ... [14s] OK (14.1s)
+    ##    checking installed package size ...     checking installed package size ...   ✔  checking installed package size (1.2s)
+    ##       ✔  checking package directory (615ms)
+    ##      checking for future file timestamps ...     checking for future file timestamps ...   ✔  checking for future file timestamps (575ms)
     ##    checking 'build' directory ...  ✔  checking 'build' directory
-    ##    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   ✔  checking DESCRIPTION meta-information (369ms)
+    ##    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   ✔  checking DESCRIPTION meta-information (598ms)
     ## N  checking top-level files
     ##    Non-standard files/directories found at top level:
     ##        'README.qmd' 'README_files' 'dev'
     ## ✔  checking for left-over files
-    ##    checking index information ...     checking index information ...   ✔  checking index information (340ms)
-    ##    checking package subdirectories ...     checking package subdirectories ...   ✔  checking package subdirectories (366ms)
+    ##    checking index information ...     checking index information ...   ✔  checking index information
+    ##    checking package subdirectories ...     checking package subdirectories ...   ✔  checking package subdirectories (361ms)
     ##    checking R files for non-ASCII characters ...     checking R files for non-ASCII characters ...   ✔  checking R files for non-ASCII characters
     ##    checking R files for syntax errors ...     checking R files for syntax errors ...   ✔  checking R files for syntax errors
-    ##    checking whether the package can be loaded ...     checking whether the package can be loaded ...   ✔  checking whether the package can be loaded (1.1s)
-    ##    checking whether the package can be loaded with stated dependencies ...     checking whether the package can be loaded with stated dependencies ...   ✔  checking whether the package can be loaded with stated dependencies (900ms)
-    ##    checking whether the package can be unloaded cleanly ...     checking whether the package can be unloaded cleanly ...   ✔  checking whether the package can be unloaded cleanly (1.1s)
-    ##    checking whether the namespace can be loaded with stated dependencies ...     checking whether the namespace can be loaded with stated dependencies ...   ✔  checking whether the namespace can be loaded with stated dependencies (1000ms)
-    ##    checking whether the namespace can be unloaded cleanly ...     checking whether the namespace can be unloaded cleanly ...   ✔  checking whether the namespace can be unloaded cleanly (1.2s)
-    ##    checking loading without being on the library search path ...     checking loading without being on the library search path ...   ✔  checking loading without being on the library search path (1.6s)
-    ##    checking dependencies in R code ...     checking dependencies in R code ...   ✔  checking dependencies in R code (998ms)
-    ##    checking S3 generic/method consistency ...     checking S3 generic/method consistency ...   ✔  checking S3 generic/method consistency (1.5s)
-    ##    checking replacement functions ...     checking replacement functions ...   ✔  checking replacement functions (1s)
-    ##    checking foreign function calls ...     checking foreign function calls ...   ✔  checking foreign function calls (997ms)
-    ##    checking R code for possible problems ...     checking R code for possible problems ...   N  checking R code for possible problems (7.6s)
+    ##    checking whether the package can be loaded ...     checking whether the package can be loaded ...   ✔  checking whether the package can be loaded (2s)
+    ##    checking whether the package can be loaded with stated dependencies ...     checking whether the package can be loaded with stated dependencies ...   ✔  checking whether the package can be loaded with stated dependencies (1.9s)
+    ##    checking whether the package can be unloaded cleanly ...     checking whether the package can be unloaded cleanly ...   ✔  checking whether the package can be unloaded cleanly (1.9s)
+    ##    checking whether the namespace can be loaded with stated dependencies ...     checking whether the namespace can be loaded with stated dependencies ...   ✔  checking whether the namespace can be loaded with stated dependencies (2s)
+    ##    checking whether the namespace can be unloaded cleanly ...     checking whether the namespace can be unloaded cleanly ...   ✔  checking whether the namespace can be unloaded cleanly (2.1s)
+    ##    checking loading without being on the library search path ...     checking loading without being on the library search path ...   ✔  checking loading without being on the library search path (3.2s)
+    ##    checking dependencies in R code ...     checking dependencies in R code ...   N  checking dependencies in R code (2.2s)
+    ##    Namespaces in Imports field not imported from:
+    ##      'cowplot' 'tidyverse'
+    ##      All declared Imports should be used.
+    ##    checking S3 generic/method consistency ...     checking S3 generic/method consistency ...   ✔  checking S3 generic/method consistency (2.5s)
+    ##    checking replacement functions ...     checking replacement functions ...   ✔  checking replacement functions (1.9s)
+    ##    checking foreign function calls ...     checking foreign function calls ...   ✔  checking foreign function calls (2s)
+    ##    checking R code for possible problems ...     checking R code for possible problems ... [11s]  ─  checking R code for possible problems ... [11s] NOTE (11.4s)
     ##    theme_cmac: no visible global function definition for 'alpha'
     ##    Undefined global functions or variables:
     ##      alpha
-    ##    checking Rd files ...     checking Rd files ...   ✔  checking Rd files (451ms)
+    ##    checking Rd files ...     checking Rd files ...   ✔  checking Rd files (438ms)
     ##    checking Rd metadata ...     checking Rd metadata ...   ✔  checking Rd metadata
     ##    checking Rd line widths ...     checking Rd line widths ...   ✔  checking Rd line widths
-    ##    checking Rd cross-references ...     checking Rd cross-references ...   ✔  checking Rd cross-references (452ms)
-    ##    checking for missing documentation entries ...     checking for missing documentation entries ...   ✔  checking for missing documentation entries (1.1s)
-    ##    checking for code/documentation mismatches ...     checking for code/documentation mismatches ...   ✔  checking for code/documentation mismatches (3.1s)
-    ##    checking Rd \usage sections ...     checking Rd \usage sections ...   ✔  checking Rd \usage sections (1.9s)
+    ##    checking Rd cross-references ...     checking Rd cross-references ...   ✔  checking Rd cross-references (342ms)
+    ##    checking for missing documentation entries ...     checking for missing documentation entries ...   ✔  checking for missing documentation entries (2s)
+    ##    checking for code/documentation mismatches ...     checking for code/documentation mismatches ...   ✔  checking for code/documentation mismatches (5.9s)
+    ##    checking Rd \usage sections ...     checking Rd \usage sections ...   ✔  checking Rd \usage sections (3s)
     ##    checking Rd contents ...     checking Rd contents ...   ✔  checking Rd contents
-    ##    checking for unstated dependencies in examples ...     checking for unstated dependencies in examples ...   ✔  checking for unstated dependencies in examples (345ms)
+    ##    checking for unstated dependencies in examples ...     checking for unstated dependencies in examples ...   ✔  checking for unstated dependencies in examples (340ms)
     ##          checking installed files from 'inst/doc' ...     checking installed files from 'inst/doc' ...   ✔  checking installed files from 'inst/doc'
     ##    checking files in 'vignettes' ...     checking files in 'vignettes' ...   ✔  checking files in 'vignettes'
-    ##      checking examples ...     checking examples ...   ✔  checking examples (4.5s)
-    ##          checking for unstated dependencies in vignettes ...     checking for unstated dependencies in vignettes ...   ✔  checking for unstated dependencies in vignettes (355ms)
-    ##    checking package vignettes in 'inst/doc' ...  ✔  checking package vignettes in 'inst/doc'
-    ##      checking re-building of vignette outputs ...     checking re-building of vignette outputs ...   ✔  checking re-building of vignette outputs (7.3s)
+    ##    checking examples ...     checking examples ...   ✔  checking examples (6.4s)
+    ##          checking for unstated dependencies in vignettes ...     checking for unstated dependencies in vignettes ...   ✔  checking for unstated dependencies in vignettes (350ms)
+    ##    checking package vignettes in 'inst/doc' ...     checking package vignettes in 'inst/doc' ...   ✔  checking package vignettes in 'inst/doc'
+    ##          checking re-building of vignette outputs ...     checking re-building of vignette outputs ... [27s]     checking re-building of vignette outputs ... [27s]   ─  checking re-building of vignette outputs ... [27s] OK (27.3s)
     ##    checking for non-standard things in the check directory ...  ✔  checking for non-standard things in the check directory
     ## ✔  checking for detritus in the temp directory
     ##    
     ##    See
-    ##      'C:/Users/daniel.carpenter/AppData/Local/Temp/Rtmp4kOUwx/styles.cmac.Rcheck/00check.log'
+    ##      'C:/Users/daniel.carpenter/AppData/Local/Temp/RtmpkFsOjO/styles.cmac.Rcheck/00check.log'
     ##    for details.
     ##    
     ##    
     ## 
 
     ## ── R CMD check results ────────────────────────────────── styles.cmac 0.1.0 ────
-    ## Duration: 1m 2.7s
+    ## Duration: 1m 52.2s
     ## 
     ## ❯ checking top-level files ... NOTE
     ##   Non-standard files/directories found at top level:
     ##     'README.qmd' 'README_files' 'dev'
     ## 
-    ## ❯ checking R code for possible problems ... NOTE
+    ## ❯ checking dependencies in R code ... NOTE
+    ##   Namespaces in Imports field not imported from:
+    ##     'cowplot' 'tidyverse'
+    ##     All declared Imports should be used.
+    ## 
+    ## ❯ checking R code for possible problems ... [11s] NOTE
     ##   theme_cmac: no visible global function definition for 'alpha'
     ##   Undefined global functions or variables:
     ##     alpha
     ## 
-    ## 0 errors ✔ | 0 warnings ✔ | 2 notes ✖
+    ## 0 errors ✔ | 0 warnings ✔ | 3 notes ✖
 
 ``` r
 # Build the package
 devtools::build()
 ```
 
-    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (446ms)
-    ##       ─  preparing 'styles.cmac': (4.7s)
+    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (420ms)
+    ##       ─  preparing 'styles.cmac': (7.5s)
     ##    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##       ─  installing the package to build vignettes
-    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (12s)
-    ##       ─  checking for LF line-endings in source and make files and shell scripts (2.4s)
+    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (29.4s)
+    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.9s)
     ##   ─  checking for empty or unneeded directories
-    ##      Removed empty directory 'styles.cmac/tests/testthat'
-    ##    Removed empty directory 'styles.cmac/tests'
-    ##    Omitted 'LazyData' from DESCRIPTION
+    ##      Omitted 'LazyData' from DESCRIPTION
     ##       ─  building 'styles.cmac_0.1.0.tar.gz'
     ##      
     ## 
@@ -204,20 +207,18 @@ devtools::build()
 devtools::install(build_vignettes = TRUE, upgrade = 'never')
 ```
 
-    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (418ms)
-    ##       ─  preparing 'styles.cmac': (4.5s)
+    ##          checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...     checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' ...   ✔  checking for file 'C:\Users\daniel.carpenter\Documents\GitHub\FPA-GitHub\CN-CMAC\styles.cmac/DESCRIPTION' (423ms)
+    ##       ─  preparing 'styles.cmac': (7.7s)
     ##    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##       ─  installing the package to build vignettes
-    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (12s)
-    ##       ─  checking for LF line-endings in source and make files and shell scripts (2.4s)
+    ##          creating vignettes ...     creating vignettes ...   ✔  creating vignettes (32.5s)
+    ##       ─  checking for LF line-endings in source and make files and shell scripts (3.9s)
     ##   ─  checking for empty or unneeded directories
-    ##      Removed empty directory 'styles.cmac/tests/testthat'
-    ##    Removed empty directory 'styles.cmac/tests'
-    ##    Omitted 'LazyData' from DESCRIPTION
+    ##      Omitted 'LazyData' from DESCRIPTION
     ##       ─  building 'styles.cmac_0.1.0.tar.gz'
     ##      
     ## Running "C:/PROGRA~1/R/R-42~1.3/bin/x64/Rcmd.exe" INSTALL \
-    ##   "C:\Users\DANIEL~1.CAR\AppData\Local\Temp\Rtmp4kOUwx/styles.cmac_0.1.0.tar.gz" \
+    ##   "C:\Users\DANIEL~1.CAR\AppData\Local\Temp\RtmpkFsOjO/styles.cmac_0.1.0.tar.gz" \
     ##   --install-tests 
     ## * installing to library 'C:/Users/daniel.carpenter/AppData/Local/R/win-library/4.2'
     ## * installing *source* package 'styles.cmac' ...

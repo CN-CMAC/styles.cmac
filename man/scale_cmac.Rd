@@ -12,7 +12,10 @@ scale_cmac(
   ...,
   colorOffset = 0,
   reverseOrder = FALSE,
-  displayNames = FALSE
+  displayNames = FALSE,
+  darkenPaletteForTextGeoms = FALSE,
+  useColorBlindPalette = FALSE,
+  colorBlindPaletteName = "safe"
 )
 }
 \arguments{
@@ -25,6 +28,12 @@ scale_cmac(
 \item{reverseOrder}{TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
 
 \item{displayNames}{TRUE if you want to see the names of each color. Default FALSE.}
+
+\item{darkenPaletteForTextGeoms}{Logical, if TRUE then the palette will be darkened by 25 percent}
+
+\item{useColorBlindPalette}{Logical, if TRUE uses color blind friendly palette instead of CMAC style.}
+
+\item{colorBlindPaletteName}{Name of colorblind friendly palette. Use `cols4all::c4a_palettes()` for available palettes.}
 }
 \value{
 hex codes of a subsetted CMAC palette
@@ -46,6 +55,9 @@ scale_cmac('color', displayNames = TRUE) # All accent colors (line colors)
 scale_cmac('fill',  displayNames = TRUE) # All main colors (fills)
 scale_cmac('fill', 3)                    # 3 fills
 scale_cmac('fill', 'red', displayNames = TRUE) # Just a red fill
+
+# Color blind friendly palette override
+scale_cmac('color', useColorBlindPalette = TRUE)
 
 }
 \seealso{

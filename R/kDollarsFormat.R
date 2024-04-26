@@ -1,10 +1,10 @@
 #' Converts value to scaled format.
-#' For example, 10^6 returns "$1 M" in millions format.
+#' For example, 10^6 returns "$1 MM" in millions format.
 #'
 #' @return Formatted number
 #'
 #' @param x A numeric value or vector.
-#' @param scaleUnit the desired scaling to calculate. Thousands = 'K', Millions = 'M', Billions = 'B', Trillions = 'T'.
+#' @param scaleUnit Default 'MM', the desired scaling to calculate. Thousands = 'K', Millions = 'M' (or 'MM'), Billions = 'B', Trillions = 'T'.
 #' @param useDollarSign Default TRUE if you want to add a dollar sign to the suffix. False to omit '$'.
 #' @param roundToDigit Digits to round to after the value has been scaled.
 #'
@@ -16,6 +16,7 @@
 #' @examples
 #' kDollarsFormat(1000, scaleUnit = 'K')
 #' kDollarsFormat(1000000, scaleUnit = 'M')
+#' kDollarsFormat(1000000, scaleUnit = 'MM')
 #' kDollarsFormat(1000000000, scaleUnit = 'B')
 #' kDollarsFormat(1500000000000, scaleUnit = 'T')
 #' kDollarsFormat(1000000, scaleUnit = 'M', useDollarSign = FALSE)
@@ -28,19 +29,23 @@
 
 # Create the function
 kDollarsFormat <- function(x,
-                           scaleUnit     = 'M',
+                           scaleUnit     = 'MM',
                            useDollarSign = TRUE,
                            roundToDigit  = 1
                            ) {
   # Stop if x is not numeric
   if (!is.numeric(x)) stop('`x` must be a number.')
 
+  # Override millions to MM format
+  if (scaleUnit == 'M') scaleUnit = 'MM'
+
   # List of possible formats
   formatTypes <- list(
-    'K' = 3,
-    'M' = 6,
-    'B' = 9,
-    'T' = 12
+    'K'  = 3,
+    'M'  = 6, # either works as input, but will output 'MM'
+    'MM' = 6,
+    'B'  = 9,
+    'T'  = 12
   )
 
   # Convert list to data frame
@@ -63,7 +68,7 @@ kDollarsFormat <- function(x,
   # Create the formatted number
   formattedNumber = dollar(x,
                            prefix = ifelse(useDollarSign, "$", ''), # dollar or not
-                           suffix = paste0(' ', trimws(scaleUnit)))  # K/M
+                           suffix = paste0(' ', trimws(scaleUnit)))  # K/MM
 
   return(formattedNumber)
 }

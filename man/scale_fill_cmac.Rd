@@ -8,6 +8,8 @@ scale_fill_cmac(
   overrideWithAccent = FALSE,
   colorOffset = 0,
   reverseOrder = FALSE,
+  useColorBlindPalette = FALSE,
+  colorBlindPaletteName = "color_blind",
   ...
 )
 }
@@ -17,6 +19,10 @@ scale_fill_cmac(
 \item{colorOffset}{Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.}
 
 \item{reverseOrder}{TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
+
+\item{useColorBlindPalette}{Logical, if TRUE uses color blind friendly palette instead of CMAC style.}
+
+\item{colorBlindPaletteName}{Name of colorblind friendly palette. Use `cols4all::c4a_palettes()` for available palettes.}
 
 \item{...}{Additional parameters passed to either scale_color_manual or scale_fill_manual functions, such as guide = 'none'}
 }
@@ -51,6 +57,9 @@ ggplotObject + scale_fill_cmac(colorOffset = 1)
 
 # reverse the order of the palette
 ggplotObject + scale_fill_cmac(reverseOrder = TRUE)
+
+# Use color blind palette
+ggplotObject + scale_fill_cmac(useColorBlindPalette = TRUE)
 
 }
 \seealso{

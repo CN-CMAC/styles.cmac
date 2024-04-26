@@ -6,7 +6,10 @@
 #' @param aesthetic Color aesthetic in 'fill', 'color', 'base', 'text','border','background', or 'grayedOut'
 #' @param colorOffset Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.
 #' @param reverseOrder TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.
+#' @param darkenPaletteForTextGeoms Logical, if TRUE then the palette will be darkened by 25 percent
 #' @param displayNames TRUE if you want to see the names of each color. Default FALSE.
+#' @param useColorBlindPalette Logical, if TRUE uses color blind friendly palette instead of CMAC style.
+#' @param colorBlindPaletteName Name of colorblind friendly palette. Use `cols4all::c4a_palettes()` for available palettes.
 #' @param ... single or vector of colors
 #'
 #' @return hex codes of a subsetted CMAC palette
@@ -25,6 +28,9 @@
 #' scale_cmac('fill', 3)                    # 3 fills
 #' scale_cmac('fill', 'red', displayNames = TRUE) # Just a red fill
 #'
+#' # Color blind friendly palette override
+#' scale_cmac('color', useColorBlindPalette = TRUE)
+#'
 #' @seealso \code{\link{theme_cmac}}
 #' @seealso \code{\link{scale_color_cmac}}
 #' @seealso \code{\link{scale_fill_cmac}}
@@ -35,7 +41,10 @@ scale_cmac <- function(aesthetic    = NULL,
                        ...,
                        colorOffset  = 0,
                        reverseOrder = FALSE,
-                       displayNames = FALSE
+                       displayNames = FALSE,
+                       darkenPaletteForTextGeoms = FALSE,
+                       useColorBlindPalette = FALSE,
+                       colorBlindPaletteName = 'safe'
                        ) {
 
   # Overrride for text colors
@@ -70,9 +79,12 @@ scale_cmac <- function(aesthetic    = NULL,
 
     # Else return a subsetted palette
     else return( getPalette(aesthetic, colors,
-                            displayNames = displayNames,
-                            colorOffset = colorOffset,
-                            reverseOrder = reverseOrder
+                            displayNames          = displayNames,
+                            colorOffset           = colorOffset,
+                            reverseOrder          = reverseOrder,
+                            darkenPaletteForTextGeoms = darkenPaletteForTextGeoms,
+                            useColorBlindPalette  = useColorBlindPalette,
+                            colorBlindPaletteName = colorBlindPaletteName
                             )
                  )
   }

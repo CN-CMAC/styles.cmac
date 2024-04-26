@@ -10,6 +10,9 @@ getPalette(
   colorOffset = 0,
   reverseOrder = FALSE,
   displayNames = FALSE,
+  darkenPaletteForTextGeoms = FALSE,
+  useColorBlindPalette = FALSE,
+  colorBlindPaletteName = "safe",
   fileSuffix = "-colors",
   fileExtension = ".csv",
   directoryOfPalette = "extdata",
@@ -26,6 +29,12 @@ getPalette(
 \item{reverseOrder}{TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
 
 \item{displayNames}{Logical, if TRUE display names of the colors}
+
+\item{darkenPaletteForTextGeoms}{Logical, if TRUE then the palette will be darkened by 25 percent}
+
+\item{useColorBlindPalette}{Logical, if TRUE uses color blind friendly palette instead of CMAC style.}
+
+\item{colorBlindPaletteName}{Name of colorblind friendly palette. Use `cols4all::c4a_palettes()` for available palettes.}
 
 \item{fileSuffix}{A suffix to be added to the file name (default: "-colors")}
 
