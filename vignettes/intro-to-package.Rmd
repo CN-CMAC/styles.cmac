@@ -24,7 +24,7 @@ The `styles.cmac` package provides a suite of functions for color styling in `gg
 
 For a deeper dive into the package's colorblind-friendly design, visit the fill palette and color (*line*) palette URLs provided below. This gives an overview of what the palette looks like as a whole.
 
--   See colorblind statistics for the [fill palette](https://davidmathlogic.com/colorblind/#%23C0D0E4-%23FFD29A-%23FFB5B3-%23B9DDCF-%23CBC5EA-%23F2D4A0-%23DDC9CB-%23CCCED6) and the [color (*line*) palette](https://davidmathlogic.com/colorblind/#%238797AB-%23D6A55C-%23C3726F-%2387AB9D-%238D87AB-%23C2A570-%23A38F91-%23828591)
+-   See colorblind statistics for the [fill palette](https://davidmathlogic.com/colorblind/#%23B4D0F4-%23FFD39F-%23FFB5B3-%23B4DFCE-%23CDC9E0-%23F2D4A0-%23C3C6D2-%23E6D7D7) and the [color (*line*) palette](https://davidmathlogic.com/colorblind/#%237996B9-%23DBA657-%23C86D6A-%2383AF9E-%23928EA4-%23C2A570-%23828591-%23BAABAB)
 
 -   [*Reference*: Original Tableau 10 Palette](https://www.tableau.com/blog/colors-upgrade-tableau-10-56782)
 

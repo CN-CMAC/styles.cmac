@@ -47,9 +47,9 @@ Daniel Carpenter
 >   the [Tableau 10
 >   Palette](https://www.tableau.com/blog/colors-upgrade-tableau-10-56782)
 > - See colorblind statistics for the [fill
->   palette](https://davidmathlogic.com/colorblind/#%23C0D0E4-%23FFD29A-%23FFB5B3-%23B9DDCF-%23CBC5EA-%23F2D4A0-%23DDC9CB-%23CCCED6)
+>   palette](https://davidmathlogic.com/colorblind/#%23B4D0F4-%23FFD39F-%23FFB5B3-%23B4DFCE-%23CDC9E0-%23F2D4A0-%23C3C6D2-%23E6D7D7)
 >   and the [color (*line*)
->   palette](https://davidmathlogic.com/colorblind/#%238797AB-%23D6A55C-%23C3726F-%2387AB9D-%238D87AB-%23C2A570-%23A38F91-%23828591)
+>   palette](https://davidmathlogic.com/colorblind/#%237996B9-%23DBA657-%23C86D6A-%2383AF9E-%23928EA4-%23C2A570-%23828591-%23BAABAB)
 > - ***PLEASE SEE THE PACKAGE <u>VIGNETTE</u> FOR MORE DETAILED
 >   EXAMPLES***
 
@@ -261,16 +261,13 @@ kDollarsFormat(1000,          scaleUnit = 'K')
 kDollarsFormat(1000000,       scaleUnit = 'M')
 ```
 
-    [1] "$1 M"
+    [1] "$1 MM"
 
 ``` r
 kDollarsFormat(1000000,       scaleUnit = 'MM')
 ```
 
-    Warning in kDollarsFormat(1e+06, scaleUnit = "MM"): Scale format given (MM) not
-    in list: K, M, B, T. Using "M" as default.
-
-    [1] "$1 M"
+    [1] "$1 MM"
 
 ``` r
 kDollarsFormat(1000000000,    scaleUnit = 'B')
@@ -288,7 +285,7 @@ kDollarsFormat(1500000000000, scaleUnit = 'T')
 kDollarsFormat(1000000,       scaleUnit = 'M', useDollarSign = FALSE)
 ```
 
-    [1] "1 M"
+    [1] "1 MM"
 
 ## Colors Deep Dive
 
