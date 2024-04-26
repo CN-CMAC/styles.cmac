@@ -195,6 +195,7 @@ basePlot + scale_color_cmac(useColorBlindPalette = TRUE,
 ```{r}
 kDollarsFormat(1000,          scaleUnit = 'K')
 kDollarsFormat(1000000,       scaleUnit = 'M')
+kDollarsFormat(1000000,       scaleUnit = 'MM')
 kDollarsFormat(1000000000,    scaleUnit = 'B')
 kDollarsFormat(1500000000000, scaleUnit = 'T')
 kDollarsFormat(1000000,       scaleUnit = 'M', useDollarSign = FALSE)

@@ -264,6 +264,15 @@ kDollarsFormat(1000000,       scaleUnit = 'M')
     [1] "$1 M"
 
 ``` r
+kDollarsFormat(1000000,       scaleUnit = 'MM')
+```
+
+    Warning in kDollarsFormat(1e+06, scaleUnit = "MM"): Scale format given (MM) not
+    in list: K, M, B, T. Using "M" as default.
+
+    [1] "$1 M"
+
+``` r
 kDollarsFormat(1000000000,    scaleUnit = 'B')
 ```
 
@@ -297,7 +306,7 @@ scale_cmac('fill', displayNames = TRUE)
 ```
 
          blue    orange       red     green    purple    yellow      gray   purple1 
-    "#C0D0E4" "#FFD29A" "#FFB5B3" "#B9DDCF" "#CBC5EA" "#F2D4A0" "#C3C6D2" "#E6D7D7" 
+    "#B4D0F4" "#FFD39F" "#FFB5B3" "#B4DFCE" "#CDC9E0" "#F2D4A0" "#C3C6D2" "#E6D7D7" 
 
 #### Accent colors
 
@@ -306,7 +315,7 @@ scale_cmac('color', displayNames = TRUE)
 ```
 
          blue    orange       red     green    purple    yellow      gray   purple1 
-    "#8797ab" "#d6a55c" "#c3726f" "#87ab9d" "#8d87ab" "#c2a570" "#828591" "#baabab" 
+    "#7996b9" "#dba657" "#c86d6a" "#83af9e" "#928ea4" "#c2a570" "#828591" "#baabab" 
 
 #### Blue and Gray colors, like the background of slide decks
 
@@ -379,7 +388,7 @@ scale_cmac('blue', 'blue2')
 scale_cmac('color', 3)
 ```
 
-    [1] "#8797ab" "#d6a55c" "#c3726f"
+    [1] "#7996b9" "#dba657" "#c86d6a"
 
 ``` r
 # Get the last 3 colors in the fill palette
@@ -393,4 +402,4 @@ scale_cmac('color')[6:8]
 scale_cmac('color', 'blue', 'orange', 'green', 'yellow')
 ```
 
-    [1] "#8797ab" "#d6a55c" "#87ab9d" "#c2a570"
+    [1] "#7996b9" "#dba657" "#83af9e" "#c2a570"
