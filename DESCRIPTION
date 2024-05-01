@@ -29,4 +29,4 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-URL: https://styles.cmac.org, https://github.com/CN-CMAC/styles.cmac
+URL: https://cn-cmac.github.io/styles.cmac/
