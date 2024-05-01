@@ -2,7 +2,7 @@
 title: "Palette Viewer"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{simulate-palette}
+  %\VignetteIndexEntry{Palette Viewer}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

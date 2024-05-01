@@ -5,7 +5,8 @@
 #' @param displayNames TRUE if you want to return a named list with the colors.
 #'
 #' @return The palette that only includes the subset of colors
-
+#'
+#' @keywords internal
 
 
 # Create the function

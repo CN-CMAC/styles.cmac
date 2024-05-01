@@ -26,11 +26,11 @@ getPalette(
 
 \item{colorOffset}{Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.}
 
-\item{reverseOrder}{TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
+\item{reverseOrder}{Logical, TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
 
 \item{displayNames}{Logical, if TRUE display names of the colors}
 
-\item{darkenPaletteForTextGeoms}{Logical, if TRUE then the palette will be darkened by 25 percent}
+\item{darkenPaletteForTextGeoms}{Logical, if TRUE then the palette will be darkened  slightly}
 
 \item{useColorBlindPalette}{Logical, if TRUE uses color blind friendly palette instead of CMAC style.}
 
@@ -50,3 +50,4 @@ The function returns a named list representing a color palette
 \description{
 This function reads palette data from CSV files located in a specified directory
 }
+\keyword{internal}

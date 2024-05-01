@@ -1,7 +1,7 @@
 Package: styles.cmac
 Type: Package
 Title: CMAC Branding for `ggplot2`
-Version: 0.1.0
+Version: 1.3.2
 Author@R: person("Daniel", "Carpenter", email = "daniel.carpenter@chickasaw.net",
                   role = c("aut", "cre") )
 Author: Daniel Carpenter [aut, cre]
@@ -29,3 +29,4 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://styles.cmac.org, https://github.com/CN-CMAC/styles.cmac

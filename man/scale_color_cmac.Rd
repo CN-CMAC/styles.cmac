@@ -19,9 +19,9 @@ scale_color_cmac(
 
 \item{colorOffset}{Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.}
 
-\item{reverseOrder}{TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
+\item{reverseOrder}{Logical, TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
 
-\item{darkenPaletteForTextGeoms}{Logical, if TRUE then the palette will be darkened by 25 percent}
+\item{darkenPaletteForTextGeoms}{Logical, if TRUE then the palette will be darkened slightly.}
 
 \item{useColorBlindPalette}{Logical, if TRUE uses color blind friendly palette instead of CMAC style.}
 

@@ -2,10 +2,7 @@
 % Please edit documentation in R/scale_cmac.R
 \name{scale_cmac}
 \alias{scale_cmac}
-\title{Function that returns palettes or individual colors
-This is done separately just to reduce noise in the file
-Mainly, this just either displays the names of the colors or not when returing
-It also allows you to return 1 or all of the colors}
+\title{Function that returns a palette or a set of individual colors within the palette.}
 \usage{
 scale_cmac(
   aesthetic = NULL,
@@ -25,11 +22,11 @@ scale_cmac(
 
 \item{colorOffset}{Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.}
 
-\item{reverseOrder}{TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
+\item{reverseOrder}{Logical, TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
 
 \item{displayNames}{TRUE if you want to see the names of each color. Default FALSE.}
 
-\item{darkenPaletteForTextGeoms}{Logical, if TRUE then the palette will be darkened by 25 percent}
+\item{darkenPaletteForTextGeoms}{Logical, if TRUE then the palette ill be darkened slightly.}
 
 \item{useColorBlindPalette}{Logical, if TRUE uses color blind friendly palette instead of CMAC style.}
 
@@ -39,10 +36,7 @@ scale_cmac(
 hex codes of a subsetted CMAC palette
 }
 \description{
-Function that returns palettes or individual colors
-This is done separately just to reduce noise in the file
-Mainly, this just either displays the names of the colors or not when returing
-It also allows you to return 1 or all of the colors
+Function that returns a palette or a set of individual colors within the palette.
 }
 \examples{
 library(styles.cmac)
