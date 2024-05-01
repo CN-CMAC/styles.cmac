@@ -7,7 +7,7 @@
 offsetPalette(colors, colorOffset)
 }
 \arguments{
-\item{colors}{A colors of color names}
+\item{colors}{A vector of color names}
 
 \item{colorOffset}{Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.}
 }
@@ -17,3 +17,4 @@ The function returns a palette colors
 \description{
 This function offsets a palette by a number of colors
 }
+\keyword{internal}

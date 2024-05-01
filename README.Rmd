@@ -1,13 +1,18 @@
 ---
-title: "CMAC Brand in ggplot2 - Installation and Examples"
-author: "Daniel Carpenter"
-format: 
-    gfm:
-      toc: true
-      toc-depth: 3
-      number-sections: true
-editor: visual
+output: github_document
 ---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
 
 # `styles.cmac`
 

@@ -18,7 +18,7 @@ scale_fill_cmac(
 
 \item{colorOffset}{Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.}
 
-\item{reverseOrder}{TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
+\item{reverseOrder}{Logical, TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.}
 
 \item{useColorBlindPalette}{Logical, if TRUE uses color blind friendly palette instead of CMAC style.}
 

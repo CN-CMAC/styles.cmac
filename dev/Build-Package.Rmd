@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Do this every time you make a major change
 ```{r loading}
 library(devtools)
+library(pkgdown)
 library(quarto)
 ```
 
@@ -21,7 +22,8 @@ document()
 ```
 
 ```{r updateDocumentation}
-quarto::quarto_render('README.qmd')
+devtools::build_readme()
+pkgdown::build_site()
 ```
 
 ```{r checking}

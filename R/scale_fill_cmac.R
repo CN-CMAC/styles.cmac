@@ -4,7 +4,7 @@
 #'
 #' @param overrideWithAccent TRUE if you want to use the color palette for the fill mapping. (Default FALSE)
 #' @param colorOffset Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.
-#' @param reverseOrder TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.
+#' @param reverseOrder Logical, TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.
 #' @param useColorBlindPalette Logical, if TRUE uses color blind friendly palette instead of CMAC style.
 #' @param colorBlindPaletteName Name of colorblind friendly palette. Use `cols4all::c4a_palettes()` for available palettes.
 #' @param ... Additional parameters passed to either scale_color_manual or scale_fill_manual functions, such as guide = 'none'

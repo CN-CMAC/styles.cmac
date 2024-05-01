@@ -19,3 +19,4 @@ The palette that only includes the subset of colors
 \description{
 Format the palette vector based on the use input
 }
+\keyword{internal}

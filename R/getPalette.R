@@ -4,8 +4,8 @@
 #' @param aesthetic The name of the aesthetic
 #' @param colors A vector of color names
 #' @param colorOffset Offsets the ordering of the palette. E.g., colorOffset = 2 would move the first two colors to the end of the palette, starting at the 3rd color.
-#' @param reverseOrder TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.
-#' @param darkenPaletteForTextGeoms Logical, if TRUE then the palette will be darkened by 25 percent
+#' @param reverseOrder Logical, TRUE reverses the default order of the palette. Default FALSE. Applied after colorOffset.
+#' @param darkenPaletteForTextGeoms Logical, if TRUE then the palette will be darkened  slightly
 #' @param displayNames Logical, if TRUE display names of the colors
 #' @param useColorBlindPalette Logical, if TRUE uses color blind friendly palette instead of CMAC style.
 #' @param colorBlindPaletteName Name of colorblind friendly palette. Use `cols4all::c4a_palettes()` for available palettes.
@@ -20,6 +20,8 @@
 #' @importFrom utils read.csv
 #' @importFrom cols4all c4a
 #' @importFrom colorspace darken
+#'
+#' @keywords internal
 
 
 
