@@ -9,7 +9,7 @@ scale_fill_cmac(
   colorOffset = 0,
   reverseOrder = FALSE,
   useColorBlindPalette = FALSE,
-  colorBlindPaletteName = "color_blind",
+  colorBlindPaletteName = "safe",
   ...
 )
 }

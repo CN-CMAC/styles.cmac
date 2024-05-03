@@ -53,7 +53,7 @@ scale_fill_cmac <- function(overrideWithAccent = FALSE,
                             colorOffset        = 0,
                             reverseOrder       = FALSE,
                             useColorBlindPalette  = FALSE,
-                            colorBlindPaletteName = 'color_blind',
+                            colorBlindPaletteName = 'safe',
                             ...
                             )  {
 
