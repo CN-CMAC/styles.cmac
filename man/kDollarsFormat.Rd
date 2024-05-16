@@ -24,12 +24,39 @@ Converts value to scaled format.
 For example, 10^6 returns "$1 MM" in millions format.
 }
 \examples{
+library(ggplot2)
+library(styles.cmac)
+
 kDollarsFormat(1000, scaleUnit = 'K')
 kDollarsFormat(1000000, scaleUnit = 'M')
 kDollarsFormat(1000000, scaleUnit = 'MM')
 kDollarsFormat(1000000000, scaleUnit = 'B')
 kDollarsFormat(1500000000000, scaleUnit = 'T')
 kDollarsFormat(1000000, scaleUnit = 'M', useDollarSign = FALSE)
+
+# Examples within ggplot
+df <- mtcars
+df$mpg <- df$mpg*1000000
+
+# Create simple ggplot, no data shown by default
+gg <- df |>
+  ggplot(aes(y=mpg, x=wt)) +
+  theme_cmac()
+
+# Text labels millions dollars
+gg + geom_text(aes(label = kDollarsFormat(mpg)))
+
+# y-axis format in millions of dollars
+gg + scale_y_continuous(labels = kDollarsFormat)
+
+# y-axis format in *thousands* of dollars
+gg + scale_y_continuous(labels = ~kDollarsFormat(., scaleUnit = 'K'))
+
+# y-axis format with no decimals
+gg + scale_y_continuous(labels = ~kDollarsFormat(., roundToDigit = 0))
+
+# y-axis format with no dollar sign
+gg + scale_y_continuous(labels = ~kDollarsFormat(., useDollarSign = FALSE))
 
 }
 \seealso{
