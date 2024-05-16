@@ -26,7 +26,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">styles.cmac</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.36</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.39</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,7 +84,7 @@ visit the fill palette and color (<em>line</em>) palette URLs provided
 below. This gives an overview of what the palette looks like as a
 whole.</p>
 <ul>
-<li><p>See colorblind statistics for the <a href="https://davidmathlogic.com/colorblind/#%23B4D0F4-%23FFD39F-%23FFB5B3-%23B4DFCE-%23CDC9E0-%23F2D4A0-%23C3C6D2-%23E6D7D7" class="external-link">fill
+<li><p>See colorblind statistics for the <a href="https://davidmathlogic.com/colorblind/#%23BECDE0-%23FFD39F-%23FFB5B3-%23B4DFCE-%23CDC9E0-%23F2D4A0-%23C3C6D2-%23E6D7D7" class="external-link">fill
 palette</a> and the <a href="https://davidmathlogic.com/colorblind/#%237996B9-%23DBA657-%23C86D6A-%2383AF9E-%23928EA4-%23C2A570-%23828591-%23BAABAB" class="external-link">color
 (<em>line</em>) palette</a></p></li>
 <li><p><a href="https://www.tableau.com/blog/colors-upgrade-tableau-10-56782" class="external-link"><em>Reference</em>:
@@ -337,17 +337,56 @@ i.e., PDF distribution.</p>
 </blockquote>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="fl">1000</span>,          scaleUnit <span class="op">=</span> <span class="st">'K'</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "$1 K"</span></span>
-<span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="fl">1000000</span>,       scaleUnit <span class="op">=</span> <span class="st">'M'</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "$1 MM"</span></span>
-<span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="fl">1000000</span>,       scaleUnit <span class="op">=</span> <span class="st">'MM'</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "$1 MM"</span></span>
-<span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="fl">1000000000</span>,    scaleUnit <span class="op">=</span> <span class="st">'B'</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "$1 B"</span></span>
-<span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="fl">1500000000000</span>, scaleUnit <span class="op">=</span> <span class="st">'T'</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "$1.50 T"</span></span>
-<span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="fl">1000000</span>,       scaleUnit <span class="op">=</span> <span class="st">'M'</span>, useDollarSign <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "$1 K"</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="fl">1000000</span>,       scaleUnit <span class="op">=</span> <span class="st">'M'</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "$1 MM"</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="fl">1000000</span>,       scaleUnit <span class="op">=</span> <span class="st">'MM'</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "$1 MM"</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="fl">1000000000</span>,    scaleUnit <span class="op">=</span> <span class="st">'B'</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "$1 B"</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="fl">1500000000000</span>, scaleUnit <span class="op">=</span> <span class="st">'T'</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "$1.50 T"</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="fl">1000000</span>,       scaleUnit <span class="op">=</span> <span class="st">'M'</span>, useDollarSign <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "1 MM"</span></span></code></pre></div>
+<p>Here are some examples of how you would commonly integrate them into
+<code>ggplot2</code></p>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">mtcars</span></span>
+<span><span class="va">df</span><span class="op">$</span><span class="va">mpg</span> <span class="op">&lt;-</span> <span class="va">df</span><span class="op">$</span><span class="va">mpg</span><span class="op">*</span><span class="fl">1000000</span></span>
+<span></span>
+<span><span class="co"># Create simple ggplot, no data shown by default</span></span>
+<span><span class="va">gg</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">mpg</span>, x <span class="op">=</span> <span class="va">wt</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_cmac.html">theme_cmac</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Text labels millions dollars</span></span>
+<span><span class="va">gg</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html" class="external-link">geom_text</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>label <span class="op">=</span> <span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="intro-to-package_files/figure-html/unnamed-chunk-18-1.png" width="528"></p>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="co"># y-axis format, using function defaults</span></span>
+<span><span class="va">gg</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="va">kDollarsFormat</span><span class="op">)</span></span></code></pre></div>
+<p><img src="intro-to-package_files/figure-html/unnamed-chunk-18-2.png" width="528"></p>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="co"># y-axis format in *thousands* of dollars</span></span>
+<span><span class="va">gg</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="op">~</span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="va">.</span>, scaleUnit <span class="op">=</span> <span class="st">'K'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="intro-to-package_files/figure-html/unnamed-chunk-18-3.png" width="528"></p>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="co"># y-axis format with no decimals</span></span>
+<span><span class="va">gg</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="op">~</span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="va">.</span>, roundToDigit <span class="op">=</span> <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="intro-to-package_files/figure-html/unnamed-chunk-18-4.png" width="528"></p>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="co"># y-axis format with no dollar sign</span></span>
+<span><span class="va">gg</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="op">~</span><span class="fu"><a href="../reference/kDollarsFormat.html">kDollarsFormat</a></span><span class="op">(</span><span class="va">.</span>, useDollarSign <span class="op">=</span> <span class="cn">F</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="intro-to-package_files/figure-html/unnamed-chunk-18-5.png" width="528"></p>
 </div>
 <div class="section level2">
 <h2 id="colors-deep-dive">Colors Deep Dive<a class="anchor" aria-label="anchor" href="#colors-deep-dive"></a>
@@ -361,48 +400,56 @@ us in the <code>styles.cmac</code> package.</p>
 codes are associated with the color names.</p>
 <p>Default is <code>displayNames = FALSE</code> for best functionality
 with plotting.</p>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Fill colors</span></span>
 <span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'fill'</span>, displayNames <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="co">#&gt;      blue    orange       red     green    purple    yellow      gray   purple1 </span></span>
-<span><span class="co">#&gt; "#B4D0F4" "#FFD39F" "#FFB5B3" "#B4DFCE" "#CDC9E0" "#F2D4A0" "#C3C6D2" "#E6D7D7"</span></span>
-<span></span>
+<span><span class="co">#&gt; "#BECDE0" "#FFD39F" "#FFB5B3" "#B4DFCE" "#CDC9E0" "#F2D4A0" "#C3C6D2" "#E6D7D7"</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co"># Line colors</span></span>
 <span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'color'</span>, displayNames <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="co">#&gt;      blue    orange       red     green    purple    yellow      gray   purple1 </span></span>
-<span><span class="co">#&gt; "#7996b9" "#dba657" "#c86d6a" "#83af9e" "#928ea4" "#c2a570" "#828591" "#baabab"</span></span>
-<span></span>
+<span><span class="co">#&gt; "#7996b9" "#dba657" "#c86d6a" "#83af9e" "#928ea4" "#c2a570" "#828591" "#baabab"</span></span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co"># Blue and Gray colors, like the background of slide decks</span></span>
 <span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'blue'</span>, displayNames <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="co">#&gt;     blue1     blue2     blue3     blue4 </span></span>
-<span><span class="co">#&gt; "#183C5C" "#1F4E79" "#91AACB" "#BECDE0"</span></span>
-<span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'gray'</span>, displayNames <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; "#183C5C" "#1F4E79" "#91AACB" "#BECDE0"</span></span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'gray'</span>, displayNames <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="co">#&gt;     white    gray10     gray9     gray8     gray7     gray6     gray5     gray4 </span></span>
 <span><span class="co">#&gt; "#FFFFFF" "#FAFAFA" "#F1F1F1" "#EAEAEA" "#D9D9D9" "#CFCECE" "#A6A6A6" "#646464" </span></span>
 <span><span class="co">#&gt;     gray3     gray2     gray1 </span></span>
-<span><span class="co">#&gt; "#444444" "#363636" "#222222"</span></span>
-<span></span>
+<span><span class="co">#&gt; "#444444" "#363636" "#222222"</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co"># Text, Grays, and Blues</span></span>
 <span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'text'</span><span class="op">)</span> <span class="co"># Text (dark gray) </span></span>
-<span><span class="co">#&gt; [1] "#646464"</span></span>
-<span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'blue'</span><span class="op">)</span> <span class="co"># Grays that are in the brand</span></span>
-<span><span class="co">#&gt; [1] "#183C5C" "#1F4E79" "#91AACB" "#BECDE0"</span></span>
-<span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'gray'</span><span class="op">)</span> <span class="co"># Blues that are in the brand</span></span>
+<span><span class="co">#&gt; [1] "#646464"</span></span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'blue'</span><span class="op">)</span> <span class="co"># Grays that are in the brand</span></span>
+<span><span class="co">#&gt; [1] "#183C5C" "#1F4E79" "#91AACB" "#BECDE0"</span></span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'gray'</span><span class="op">)</span> <span class="co"># Blues that are in the brand</span></span>
 <span><span class="co">#&gt;  [1] "#FFFFFF" "#FAFAFA" "#F1F1F1" "#EAEAEA" "#D9D9D9" "#CFCECE" "#A6A6A6"</span></span>
 <span><span class="co">#&gt;  [8] "#646464" "#444444" "#363636" "#222222"</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="how-to-get-1-color">How to get <code>1 color</code>?<a class="anchor" aria-label="anchor" href="#how-to-get-1-color"></a>
 </h3>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Single color from the fill palette</span></span>
 <span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'fill'</span>, <span class="st">'red'</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "#FFB5B3"</span></span>
-<span></span>
+<span><span class="co">#&gt; [1] "#FFB5B3"</span></span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co"># Single color from the base palette</span></span>
 <span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'gray'</span>, <span class="st">'gray3'</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "#444444"</span></span>
-<span></span>
+<span><span class="co">#&gt; [1] "#444444"</span></span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co"># Single color from the base palette</span></span>
 <span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'blue'</span>, <span class="st">'blue2'</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "#1F4E79"</span></span></code></pre></div>
@@ -410,15 +457,17 @@ with plotting.</p>
 <div class="section level3">
 <h3 id="how-to-get-1-colors">How to get <code>&gt; 1 colors</code><a class="anchor" aria-label="anchor" href="#how-to-get-1-colors"></a>
 </h3>
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Get the first 3 colors in the line palette</span></span>
 <span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'color'</span>, <span class="fl">3</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "#7996b9" "#dba657" "#c86d6a"</span></span>
-<span></span>
+<span><span class="co">#&gt; [1] "#7996b9" "#dba657" "#c86d6a"</span></span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co"># Get the last 3 colors in the fill palette</span></span>
 <span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'color'</span><span class="op">)</span><span class="op">[</span><span class="fl">6</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span></span>
-<span><span class="co">#&gt; [1] "#c2a570" "#828591" "#baabab"</span></span>
-<span></span>
+<span><span class="co">#&gt; [1] "#c2a570" "#828591" "#baabab"</span></span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co"># Or access specific colors all at once</span></span>
 <span><span class="fu"><a href="../reference/scale_cmac.html">scale_cmac</a></span><span class="op">(</span><span class="st">'color'</span>, <span class="st">'blue'</span>, <span class="st">'orange'</span>, <span class="st">'green'</span>, <span class="st">'yellow'</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "#7996b9" "#dba657" "#83af9e" "#c2a570"</span></span></code></pre></div>

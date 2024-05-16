@@ -12,7 +12,7 @@ For example, 10^6 returns "$1 MM" in millions format.'><!-- mathjax --><script s
     
     <a class="navbar-brand me-2" href="../index.html">styles.cmac</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.36</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.39</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,7 +88,10 @@ For example, 10^6 returns "$1 MM" in millions format.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">kDollarsFormat</span><span class="op">(</span><span class="fl">1000</span>, scaleUnit <span class="op">=</span> <span class="st">'K'</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://cn-cmac.github.io/styles.cmac/">styles.cmac</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">kDollarsFormat</span><span class="op">(</span><span class="fl">1000</span>, scaleUnit <span class="op">=</span> <span class="st">'K'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "$1 K"</span>
 <span class="r-in"><span><span class="fu">kDollarsFormat</span><span class="op">(</span><span class="fl">1000000</span>, scaleUnit <span class="op">=</span> <span class="st">'M'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "$1 MM"</span>
@@ -100,6 +103,35 @@ For example, 10^6 returns "$1 MM" in millions format.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "$1.50 T"</span>
 <span class="r-in"><span><span class="fu">kDollarsFormat</span><span class="op">(</span><span class="fl">1000000</span>, scaleUnit <span class="op">=</span> <span class="st">'M'</span>, useDollarSign <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1 MM"</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Examples within ggplot</span></span></span>
+<span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">mtcars</span></span></span>
+<span class="r-in"><span><span class="va">df</span><span class="op">$</span><span class="va">mpg</span> <span class="op">&lt;-</span> <span class="va">df</span><span class="op">$</span><span class="va">mpg</span><span class="op">*</span><span class="fl">1000000</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Create simple ggplot, no data shown by default</span></span></span>
+<span class="r-in"><span><span class="va">gg</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>y<span class="op">=</span><span class="va">mpg</span>, x<span class="op">=</span><span class="va">wt</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="theme_cmac.html">theme_cmac</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Text labels millions dollars</span></span></span>
+<span class="r-in"><span><span class="va">gg</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html" class="external-link">geom_text</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>label <span class="op">=</span> <span class="fu">kDollarsFormat</span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="kDollarsFormat-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># y-axis format in millions of dollars</span></span></span>
+<span class="r-in"><span><span class="va">gg</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="va">kDollarsFormat</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="kDollarsFormat-2.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># y-axis format in *thousands* of dollars</span></span></span>
+<span class="r-in"><span><span class="va">gg</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="op">~</span><span class="fu">kDollarsFormat</span><span class="op">(</span><span class="va">.</span>, scaleUnit <span class="op">=</span> <span class="st">'K'</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="kDollarsFormat-3.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># y-axis format with no decimals</span></span></span>
+<span class="r-in"><span><span class="va">gg</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="op">~</span><span class="fu">kDollarsFormat</span><span class="op">(</span><span class="va">.</span>, roundToDigit <span class="op">=</span> <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="kDollarsFormat-4.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># y-axis format with no dollar sign</span></span></span>
+<span class="r-in"><span><span class="va">gg</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="op">~</span><span class="fu">kDollarsFormat</span><span class="op">(</span><span class="va">.</span>, useDollarSign <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="kDollarsFormat-5.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
