@@ -13,7 +13,7 @@
 >   the [Tableau 10
 >   Palette](https://www.tableau.com/blog/colors-upgrade-tableau-10-56782)
 > - See colorblind statistics for the [fill
->   palette](https://davidmathlogic.com/colorblind/#%23B4D0F4-%23FFD39F-%23FFB5B3-%23B4DFCE-%23CDC9E0-%23F2D4A0-%23C3C6D2-%23E6D7D7)
+>   palette](https://davidmathlogic.com/colorblind/#%23BECDE0-%23FFD39F-%23FFB5B3-%23B4DFCE-%23CDC9E0-%23F2D4A0-%23C3C6D2-%23E6D7D7)
 >   and the [color (*line*)
 >   palette](https://davidmathlogic.com/colorblind/#%237996B9-%23DBA657-%23C86D6A-%2383AF9E-%23928EA4-%23C2A570-%23828591-%23BAABAB)
 > - ***PLEASE SEE THE PACKAGE <u>VIGNETTE</u> FOR MORE DETAILED
@@ -248,7 +248,7 @@ kDollarsFormat(1000000,       scaleUnit = 'M', useDollarSign = FALSE)
 ``` r
 scale_cmac('fill', displayNames = TRUE)
 #>      blue    orange       red     green    purple    yellow      gray   purple1 
-#> "#B4D0F4" "#FFD39F" "#FFB5B3" "#B4DFCE" "#CDC9E0" "#F2D4A0" "#C3C6D2" "#E6D7D7"
+#> "#BECDE0" "#FFD39F" "#FFB5B3" "#B4DFCE" "#CDC9E0" "#F2D4A0" "#C3C6D2" "#E6D7D7"
 ```
 
 #### Accent colors
