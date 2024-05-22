@@ -1,7 +1,7 @@
 Package: styles.cmac
 Type: Package
 Title: CMAC Branding for `ggplot2`
-Version: 0.39
+Version: 0.41
 Author@R: person("Daniel", "Carpenter", email = "daniel.carpenter@chickasaw.net",
                   role = c("aut", "cre") )
 Author: Daniel Carpenter [aut, cre]
