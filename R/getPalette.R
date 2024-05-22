@@ -19,7 +19,7 @@
 #' @importFrom stats setNames
 #' @importFrom utils read.csv
 #' @importFrom cols4all c4a
-#' @importFrom colorspace darken
+#' @importFrom colorspace darken lighten
 #'
 #' @keywords internal
 
@@ -41,6 +41,7 @@ getPalette <- function(aesthetic, colors,
 
   # Intensity to darken text
   DARKEN_AMOUNT = 0.4
+  LIGHTEN_AMOUNT_FILL = 0.6
 
   # If using brand palette
   if ( !(useColorBlindPalette) ) {
@@ -60,10 +61,16 @@ getPalette <- function(aesthetic, colors,
 
   # Using Color blind palette
   } else {
+    # Get color blind palette.
     thePalette <- c4a(palette = colorBlindPaletteName)
+
+    # Lighten the palette if using fill palette
+    if (aesthetic == 'fill') {
+      thePalette <- lighten(thePalette, LIGHTEN_AMOUNT_FILL)
+    }
   }
 
-  # Offset the palette if user specifics
+  # Offset the palette if user specifies
   thePalette <- offsetPalette(thePalette, colorOffset = colorOffset)
 
   # Reverse order if user specifies
